@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Девайс</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <nav class="main-navigation">
+        <a href="index.html" class="main-logo">
+          <img src="https://placehold.it/163x35" width="163" height="35" alt="Логотип интернет-магазина гаджетов «Девайс»">
+        </a>
+
+        <!--Верхняя часть главной навигации (<div> в кач-ве обёртки)-->
+        <div class="top-menu">
+          <!--Форма поиска-->
+          <label for="search" class="visually-hidden">Поиск по сайту</label>
+          <input type="text" name="search" id="search" placeholder="Поиск по сайту">
+
+          <ul class="user-navigation">
+            <li class="user-navigation__link">
+              <ul class="user-menu">
+                <li>
+                  <a href="#" class="username">Валентин петухов</a>
+                </li>
+                <li>
+                  <a href="#" class="logout-link">Выйти</a>
+                </li>
+              </ul>
+            </li>
+            <li class="user-navigation__link">
+              <a href="#">Сравнить</a>
+            </li>
+            <li class="user-navigation__link">
+              <a href="#">Корзина</a>
+            </li>
+          </ul>
+        </div>
+
+        <!--Нижняя часть главной навигации (<div> в кач-ве обёртки)-->
+        <div class="bottom-menu">
+          <a href="#">Каталог товаров</a>
+
+          <!--Каталог товаров. Скрыт до клика по соответствующей ссылке-->
+          <ul class="catalogue">
+            <li class="catalogue__link">
+              <a href="#">Виртуальная реальность</a>
+            </li>
+            <li class="catalogue__link">
+              <a href="#">Моноподы для селфи</a>
+            </li>
+            <li class="catalogue__link">
+              <a href="#">Экшн-камеры</a>
+            </li>
+            <li class="catalogue__link">
+              <a href="#">Фитнес-браслеты</a>
+            </li>
+            <li class="catalogue__link">
+              <a href="#">Умные часы</a>
+            </li>
+            <li class="catalogue__link">
+              <a href="#">Квадрокоптеры</a>
+            </li>
+          </ul>
+
+          <ul class="site-navigation">
+            <li class="bottom-navigation__link">
+              <a href="#">Доставка</a>
+            </li>
+            <li class="bottom-navigation__link">
+              <a href="#">Гарантия</a>
+            </li>
+            <li class="bottom-navigation__link">
+              <a href="#">Контакты</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <h1 class="main-header">Моноподы для селфи</h1>
+      <ul class="breadcrumbs">
+        <li class="breadcrumbs__link">
+          <a href="#">Главная</a>
+        </li>
+        <li class="breadcrumbs__link">
+          <a href="#">Каталог товаров</a>
+        </li>
+        <li class="breadcrumbs__link breadcrumbs__link--current">
+          Моноподы для селфи
+        </li>
+      </ul>
+
+      <!--Зарезервировано для заголовка "Фильтр" и панели сортировки товаров-->
+
+      <section class="filter">
+        <h2 class="visually-hidden">Фильтр</h2>
+        <!--Зарезервировано под форму "Стоимость"-->
+
+        <h3>Цвет</h3>
+        <ul class="colors">
+          <li>
+            <input type="checkbox" name="color" id="black">
+            <label for="black">Чёрный</label>
+          </li>
+          <li>
+            <input type="checkbox" name="color" id="white">
+            <label for="white">Белый</label>
+          </li>
+          <li>
+            <input type="checkbox" name="color" id="blue">
+            <label for="blue">Синий</label>
+          </li>
+          <li>
+            <input type="checkbox" name="color" id="red">
+            <label for="red">Красный</label>
+          </li>
+          <li>
+            <input type="checkbox" name="color" id="pink">
+            <label for="pink">Розовый</label>
+          </li>
+        </ul>
+
+        <h3>Bluetooth</h3>
+        <ul class="bluetooth">
+          <li>
+            <input type="radio" name="bluetooth" id="bluetooth-true">
+            <label for="bluetooth-true">Есть</label>
+          </li>
+          <li>
+            <input type="radio" name="bluetooth" id="bluetooth-false">
+            <label for="bluetooth-true">Нет</label>
+          </li>
+        </ul>
+
+        <a href="#" class="button">Показать</a>
+      </section>
+
+      <section class="catalogue">
+        <ul class="catalogue__list">
+          <li class="item-card">
+            <!--Порядок отображения элементов будет изменён (<div> в кач-ве обёртки)-->
+            <div class="item-card__panel">
+              <h3 class="item-card__name">
+                <a href="#">Любительская селфи-палка</a>
+              </h3>
+              <b class="item-card__price">500 руб.</b>
+            </div>
+            <p class="item-card__image">
+              <img src="https://placehold.it/360x380" width="360" height="380" alt="Любительская селфи-палка">
+            </p>
+          </li>
+
+          <li class="item-card">
+            <div class="item-card__panel">
+              <h3 class="item-card__name">
+                <a href="#">Профессиональная селфи-палка</a>
+              </h3>
+              <b class="item-card__price">1 500 руб.</b>
+            </div>
+            <p class="item-card__image">
+              <img src="https://placehold.it/360x380" width="360" height="380" alt="Профессиональная">
+            </p>
+          </li>
+
+          <li class="item-card">
+            <div class="item-card__panel">
+              <h3 class="item-card__name">
+                <a href="#">Непотопляемая селфи-палка</a>
+              </h3>
+              <b class="item-card__price">2 500 руб.</b>
+            </div>
+            <p class="item-card__image">
+              <img src="https://placehold.it/360x380" width="360" height="380" alt="Непотопляемая селфи палка">
+            </p>
+          </li>
+
+          <li class="item-card">
+            <div class="item-card__panel">
+              <h3 class="item-card__name">
+                <a href="#">Селфи-палка «Следуй за мной»</a>
+              </h3>
+              <b class="item-card__price">4 900 руб.</b>
+            </div>
+            <p class="item-card__image">
+              <img src="https://placehold.it/360x380" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
+            </p>
+          </li>
+        </ul>
+
+        <!--Оверлей карточки, показываемый при наведении-->
+        <div class="item-overlay visually-hidden">
+          <button class="button">В корзину</button>
+          <button class="button">Добавить к сравнению</button>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="main-footer">
+        <!--Верхняя часть футера состоит из внутренних ссылок, поэтому выбрал <nav>-->
+        <nav class="top-footer-menu">
+          <a href="#" class="logo logo--footer">
+            <img src="https://placehold.it/163x35" width="163" height="35" alt="Логотип интернет-магазина гаджетов «Девайс»">
+          </a>
+          <ul class="user-navigation user-navigation--footer">
+            <li class="user-navigation__link">
+              <ul class="user-menu">
+                <li>
+                  <a href="#" class="username">Валентин петухов</a>
+                </li>
+                <li>
+                  <a href="#" class="logout-link">Выйти</a>
+                </li>
+              </ul>
+            </li>
+            <li class="user-navigation__link">
+              <a href="#">Сравнить</a>
+            </li>
+            <li class="user-navigation__link">
+              <a href="#">Корзина</a>
+            </li>
+          </ul>
+        </nav>
+
+        <!--Средняя часть футера (<div> в кач-ве обёртки)-->
+        <div class="middle-footer-menu">
+          <p>г. Москва, ул. Строителей, 15</p>
+          <!--Возможно нужен <nav>?-->
+          <ul class="site-navigation site-navigation--footer">
+            <li class="site-navigation__link">
+              <a href="#">Доставка</a>
+            </li>
+            <li class="site-navigation__link">
+              <a href="#">Гарантия</a>
+            </li>
+            <li class="site-navigation__link">
+              <a href="#">Контакты</a>
+            </li>
+          </ul>
+          <p>Тел.: +7 (495) 495-95-95</p>
+        </div>
+
+        <!--Нижняя часть футера (<div> в кач-ве обёртки)-->
+        <div class="bottom-footer-menu">
+          <!--Жёлтая полоса - скорее всего псевдо-элемент-->
+          <span>-</span>
+
+          <ul class="social-icons">
+            <li class="social-icons__link">
+              <a href="https://facebook.com/">
+                <img src="https://placehold.it/32x32" width="32" height="32" alt="Логотип Facebook">
+                <span class="visually-hidden">Facebook</span>
+              </a>
+            </li>
+            <li class="social-icons__link">
+              <a href="https://instagram.com/">
+                <img src="https://placehold.it/32x32" width="32" height="32" alt="Логотип Instagram">
+                <span class="visually-hidden">Instagram</span>
+              </a>
+            </li>
+            <li class="social-icons__link">
+              <a href="https://twitter.com/">
+                <img src="https://placehold.it/32x32" width="32" height="32" alt="Логотип Twitter">
+                <span class="visually-hidden">Twitter</span>
+              </a>
+            </li>
+          </ul>
+
+          <a href="https://htmlacademy.ru/intensive/htmlcss" class="academy-logo">
+            <img src="https://placehold.it/27x35" width="27" height="35" alt="Логотип HTML Academy">
+          </a>
+        </div>
+      </footer>
+
+      <!--Модальные окна-->
+
+      <!--Напишите нам-->
+      <section class="modal">
+        <h2 class="visually-hidden">Напишите нам</h2>
+        <!--Зарезервировано под форму-->
+        <button class="button">Отправить</button>
+        <span class="close-button">x</span>
+      </section>
+
+      <!--Карта-->
+      <section class="modal modal-map">
+        <h2 class="visually-hidden">Карта</h2>
+        <img src="https://placehold.it/960x559" width="960" height="559" alt="г. Москва, ул. Строителей, 15">
+        <span class="close-button">x</span>
+      </section>
