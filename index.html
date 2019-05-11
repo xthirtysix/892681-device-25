@@ -5,8 +5,197 @@
     <title>HTML Academy: Девайс</title>
   </head>
   <body>
+    <header class="main-header">
+      <nav class="main-navigation">
+        <!--Логотип. Станет полноценной частью навигации на внутренней странице-->
+        <a href="#" class="main-logo">
+          <img src="https://placehold.it/163x35" width="163" height="35" alt="Логотип интернет-магазина гаджетов «Девайс»">
+        </a>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
+        <!--Верхняя часть главной навигации-->
+        <ul class="top-navigation">
+          <li class="top-navigation__search">
+            <!--Форма поиска-->
+            <label for="search" class="visually-hidden">Поиск по сайту</label>
+            <input type="text" name="search" id="search" placeholder="Поиск по сайту">
+          </li>
+          <li class="top-navigation__link">
+            <a href="#">Войти</a>
+          </li>
+          <li class="top-navigation__link">
+            <a href="#">Сравнить</a>
+          </li>
+          <li class="top-navigation__link">
+            <a href="#">Корзина</a>
+          </li>
+        </ul>
+
+        <!--Нижняя часть главной навигации-->
+        <ul class="bottom-navigation">
+          <li class="bottom-navigation__link">
+            <a href="#">Каталог товаров</a>
+
+            <!--Каталог товаров. Скрыт до клика по соответствующей ссылке-->
+            <ul class="catalogue">
+              <li class="catalogue__link">
+                <a href="#">Виртуальная реальность</a>
+              </li>
+              <li class="catalogue__link">
+                <a href="#">Моноподы для селфи</a>
+              </li>
+              <li class="catalogue__link">
+                <a href="#">Экшн-камеры</a>
+              </li>
+              <li class="catalogue__link">
+                <a href="#">Фитнес-браслеты</a>
+              </li>
+              <li class="catalogue__link">
+                <a href="#">Умные часы</a>
+              </li>
+              <li class="catalogue__link">
+                <a href="#">Квадрокоптеры</a>
+              </li>
+            </ul>
+
+          </li>
+          <li class="bottom-navigation__link">
+            <a href="#">Доставка</a>
+          </li>
+          <li class="bottom-navigation__link">
+            <a href="#">Гарантия</a>
+          </li>
+          <li class="bottom-navigation__link">
+            <a href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1 class="visually-hidden">Интернет-магазин гаджетов «Девайс»</h1>
+
+      <!--Зарезервировано под блоки, которые не нужно размечать на задании №2 :) -->
+
+      <!--О нас-->
+      <section class="about">
+        <h2 class="section-header">О нас</h2>
+        <p class="about__description">
+          Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.
+        </p>
+        <p class="about__description">
+          Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:
+        </p>
+        <ul class="delivery">
+          <li class="delivery__item">Деловые линии</li>
+          <li class="delivery__item">Автотрейдинг</li>
+          <li class="delivery__item">ЖелДорЭкспедиция</li>
+        </ul>
+        <a href="#" class="button">
+          Подробнее о нас
+        </a>
+      </section>
+
+      <!--Контакты-->
+      <section class="contacts">
+        <h2 class="section-header">Контакты</h2>
+        <p class="contacts__description">
+            Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.
+        </p>
+        <!--Карта - описательная часть адреса, поэтому обернул её в <p>-->
+        <p>
+          <a href=# class="map">
+            <img src="https://placehold.it/560x222" width="560" height="222" alt="г. Москва, ул. Строителей, д. 15">
+          </a>
+        </p>
+        <a href="#" class="button">Напишите нам</a>
+      </section>
+    </main>
+
+    <footer class="main-footer">
+      <!--Верхняя часть футера состоит из внутренних ссылок, поэтому выбрал <nav>-->
+      <nav class="top-footer-menu">
+        <a href="#" class="logo logo--footer">
+          <img src="https://placehold.it/163x35" width="163" height="35" alt="Логотип интернет-магазина гаджетов «Девайс»">
+        </a>
+        <ul class="user-navigation">
+          <li class="user-navigation__link">
+            <a href="#">Войти</a>
+          </li>
+          <li class="user-navigation__link">
+            <a href="#">Сравнить</a>
+          </li>
+          <li class="user-navigation__link">
+            <a href="#">Корзина</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!--Средняя часть футера-->
+      <div class="middle-footer-menu">
+        <p>г. Москва, ул. Строителей, 15</p>
+        <!--Возможно нужен <nav>?-->
+        <ul class="site-navigation">
+          <li class="site-navigation__link">
+            <a href="#">Доставка</a>
+          </li>
+          <li class="site-navigation__link">
+            <a href="#">Гарантия</a>
+          </li>
+          <li class="site-navigation__link">
+            <a href="#">Контакты</a>
+          </li>
+        </ul>
+        <p>Тел.: +7 (495) 495-95-95</p>
+      </div>
+
+      <!--Нижняя часть футера-->
+      <div class="bottom-footer-menu">
+        <!--Жёлтая полоса - скорее всего псевдо-элемент-->
+        <span>-</span>
+
+        <ul class="social-icons">
+          <li class="social-icons__link">
+            <a href="https://facebook.com/">
+              <img src="https://placehold.it/32x32" width="32" height="32" alt="Логотип Facebook">
+              <span class="visually-hidden">Facebook</span>
+            </a>
+          </li>
+          <li class="social-icons__link">
+            <a href="https://instagram.com/">
+              <img src="https://placehold.it/32x32" width="32" height="32" alt="Логотип Instagram">
+              <span class="visually-hidden">Instagram</span>
+            </a>
+          </li>
+          <li class="social-icons__link">
+            <a href="https://twitter.com/">
+              <img src="https://placehold.it/32x32" width="32" height="32" alt="Логотип Twitter">
+              <span class="visually-hidden">Twitter</span>
+            </a>
+          </li>
+        </ul>
+
+        <a href="https://htmlacademy.ru/intensive/htmlcss" class="academy-logo">
+          <img src="https://placehold.it/27x35" width="27" height="35" alt="Логотип HTML Academy">
+        </a>
+      </div>
+    </footer>
+
+    <!--Модальные окна-->
+
+    <!--Напишите нам-->
+    <section class="modal">
+      <h2 class="visually-hidden">Напишите нам</h2>
+      <!--Зарезервировано под форму-->
+      <button class="button">Отправить</button>
+      <span class="close-button">x</span>
+    </section>
+
+    <!--Карта-->
+    <section class="modal modal-map">
+      <h2 class="visually-hidden">Карта</h2>
+      <img src="https://placehold.it/960x559" width="960" height="559" alt="г. Москва, ул. Строителей, 15">
+      <span class="close-button">x</span>
+    </section>
 
   </body>
 </html>
