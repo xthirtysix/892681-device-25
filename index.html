@@ -12,62 +12,67 @@
           <img src="https://placehold.it/163x35" width="163" height="35" alt="Логотип интернет-магазина гаджетов «Девайс»">
         </a>
 
-        <!--Верхняя часть главной навигации-->
-        <ul class="top-navigation">
-          <li class="top-navigation__search">
-            <!--Форма поиска-->
-            <label for="search" class="visually-hidden">Поиск по сайту</label>
-            <input type="text" name="search" id="search" placeholder="Поиск по сайту">
-          </li>
-          <li class="top-navigation__link">
-            <a href="#">Войти</a>
-          </li>
-          <li class="top-navigation__link">
-            <a href="#">Сравнить</a>
-          </li>
-          <li class="top-navigation__link">
-            <a href="#">Корзина</a>
-          </li>
-        </ul>
+      <!--Верхняя часть главной навигации (<div> в кач-ве обёртки)-->
+        <div class="top-menu">
+          <!--Форма поиска-->
+          <label for="search" class="visually-hidden">Поиск по сайту</label>
+          <input type="text" name="search" id="search" placeholder="Поиск по сайту">
 
-        <!--Нижняя часть главной навигации-->
-        <ul class="bottom-navigation">
-          <li class="bottom-navigation__link">
-            <a href="#">Каталог товаров</a>
+          <ul class="user-navigation">
+            <li class="user-navigation__link">
+              <ul class="user-menu">
+                <li class="username">
+                  <a href="#">Войти</a>
+                </li>
+              </ul>
+            </li>
+            <li class="user-navigation__link">
+              <a href="#">Сравнить</a>
+            </li>
+            <li class="user-navigation__link">
+              <a href="#">Корзина</a>
+            </li>
+          </ul>
+        </div>
 
-            <!--Каталог товаров. Скрыт до клика по соответствующей ссылке-->
-            <ul class="catalogue">
-              <li class="catalogue__link">
-                <a href="#">Виртуальная реальность</a>
-              </li>
-              <li class="catalogue__link">
-                <a href="#">Моноподы для селфи</a>
-              </li>
-              <li class="catalogue__link">
-                <a href="#">Экшн-камеры</a>
-              </li>
-              <li class="catalogue__link">
-                <a href="#">Фитнес-браслеты</a>
-              </li>
-              <li class="catalogue__link">
-                <a href="#">Умные часы</a>
-              </li>
-              <li class="catalogue__link">
-                <a href="#">Квадрокоптеры</a>
-              </li>
-            </ul>
+        <!--Нижняя часть главной навигации (<div> в кач-ве обёртки)-->
+        <div class="bottom-menu">
+          <a href="#">Каталог товаров</a>
 
-          </li>
-          <li class="bottom-navigation__link">
-            <a href="#">Доставка</a>
-          </li>
-          <li class="bottom-navigation__link">
-            <a href="#">Гарантия</a>
-          </li>
-          <li class="bottom-navigation__link">
-            <a href="#">Контакты</a>
-          </li>
-        </ul>
+          <!--Каталог товаров. Скрыт до клика по соответствующей ссылке-->
+          <ul class="catalogue">
+            <li class="catalogue__link">
+              <a href="#">Виртуальная реальность</a>
+            </li>
+            <li class="catalogue__link">
+              <a href="#">Моноподы для селфи</a>
+            </li>
+            <li class="catalogue__link">
+              <a href="#">Экшн-камеры</a>
+            </li>
+            <li class="catalogue__link">
+              <a href="#">Фитнес-браслеты</a>
+            </li>
+            <li class="catalogue__link">
+              <a href="#">Умные часы</a>
+            </li>
+            <li class="catalogue__link">
+              <a href="#">Квадрокоптеры</a>
+            </li>
+          </ul>
+
+          <ul class="site-navigation">
+            <li class="site-navigation__link">
+              <a href="#">Доставка</a>
+            </li>
+            <li class="site-navigation__link">
+              <a href="#">Гарантия</a>
+            </li>
+            <li class="site-navigation__link">
+              <a href="#">Контакты</a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
 
@@ -117,9 +122,13 @@
         <a href="#" class="logo logo--footer">
           <img src="https://placehold.it/163x35" width="163" height="35" alt="Логотип интернет-магазина гаджетов «Девайс»">
         </a>
-        <ul class="user-navigation">
+        <ul class="user-navigation user-navigation--footer">
           <li class="user-navigation__link">
-            <a href="#">Войти</a>
+            <ul class="user-menu">
+              <li class="login-link">
+                <a href="#">Вход</a>
+              </li>
+            </ul>
           </li>
           <li class="user-navigation__link">
             <a href="#">Сравнить</a>
@@ -129,12 +138,11 @@
           </li>
         </ul>
       </nav>
-
-      <!--Средняя часть футера-->
+      <!--Средняя часть футера (<div> в кач-ве обёртки)-->
       <div class="middle-footer-menu">
         <p>г. Москва, ул. Строителей, 15</p>
         <!--Возможно нужен <nav>?-->
-        <ul class="site-navigation">
+        <ul class="site-navigation site-navigation--footer">
           <li class="site-navigation__link">
             <a href="#">Доставка</a>
           </li>
@@ -147,12 +155,10 @@
         </ul>
         <p>Тел.: +7 (495) 495-95-95</p>
       </div>
-
-      <!--Нижняя часть футера-->
+      <!--Нижняя часть футера (<div> в кач-ве обёртки)-->
       <div class="bottom-footer-menu">
         <!--Жёлтая полоса - скорее всего псевдо-элемент-->
         <span>-</span>
-
         <ul class="social-icons">
           <li class="social-icons__link">
             <a href="https://facebook.com/">
@@ -173,7 +179,6 @@
             </a>
           </li>
         </ul>
-
         <a href="https://htmlacademy.ru/intensive/htmlcss" class="academy-logo">
           <img src="https://placehold.it/27x35" width="27" height="35" alt="Логотип HTML Academy">
         </a>
