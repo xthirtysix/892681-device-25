@@ -15,8 +15,14 @@
         <!--Верхняя часть главной навигации (<div> в кач-ве обёртки)-->
           <div class="top-menu">
             <!--Форма поиска-->
-            <label for="search" class="visually-hidden">Поиск по сайту</label>
-            <input type="text" name="search" id="search" placeholder="Поиск по сайту">
+            <form class="search" action="https://echo.htmlacademy.ru/" method="GET">
+              <label for="search" class="visually-hidden">Поиск по сайту</label>
+              <input type="search" name="search" id="search" placeholder="Поиск по сайту">
+              <button type="submit">
+                <span class="visually-hidden">Найти</span>
+                <img src="img/search.svg" width="16" height="16" alt="Найти">
+              </button>
+            </form>
 
             <ul class="user-navigation">
               <li class="user-navigation__link">
@@ -37,7 +43,7 @@
 
           <!--Нижняя часть главной навигации (<div> в кач-ве обёртки)-->
           <div class="bottom-menu">
-            <a href="#">Каталог товаров</a>
+            <a href="#" class="catalogue-button">Каталог товаров</a>
 
             <!--Каталог товаров. Скрыт до клика по соответствующей ссылке-->
             <ul class="catalogue">
@@ -104,12 +110,12 @@
         <section class="contacts">
           <h2 class="section-header">Контакты</h2>
           <p class="contacts__description">
-              Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.
+            Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверитьработоспособность покупки. Всякое бывает.
           </p>
           <!--Карта - описательная часть адреса, поэтому обернул её в <p>-->
           <p>
             <a href=# class="map">
-              <img src="img/map.png" width="560" height="222" alt="г. Москва, ул. Строителей, д. 15">
+              <img src="img/map.png" width="560" height="222" alt="Магазин по адресу: г. Москва, ул. Строителей, д. 15">
             </a>
           </p>
           <a href="#" class="button">Напишите нам</a>
@@ -163,19 +169,19 @@
             <li class="social-icons__link">
               <a href="https://facebook.com/">
                 <img src="https://placehold.it/32x32" width="32" height="32" alt="Логотип Facebook">
-                <span class="visually-hidden">Facebook</span>
+                <span class="visually-hidden" lang="en">Facebook</span>
               </a>
             </li>
             <li class="social-icons__link">
               <a href="https://instagram.com/">
                 <img src="https://placehold.it/32x32" width="32" height="32" alt="Логотип Instagram">
-                <span class="visually-hidden">Instagram</span>
+                <span class="visually-hidden" lang="en">Instagram</span>
               </a>
             </li>
             <li class="social-icons__link">
               <a href="https://twitter.com/">
                 <img src="https://placehold.it/32x32" width="32" height="32" alt="Логотип Twitter">
-                <span class="visually-hidden">Twitter</span>
+                <span class="visually-hidden" lang="en">Twitter</span>
               </a>
             </li>
           </ul>
@@ -190,16 +196,35 @@
       <!--Напишите нам-->
       <section class="modal">
         <h2 class="visually-hidden">Напишите нам</h2>
-        <!--Зарезервировано под форму-->
-        <button class="button">Отправить</button>
-        <span class="close-button">x</span>
+        <form action="https://echo.htmlacademy.ru/" method="POST">
+          <p>
+            <label for="username">Ваше имя:</label>
+            <input type="text" name="username" id="username" placeholder="Имя Фамилия">
+          </p>
+          <p>
+            <label for="email">Ваш e-mail</label>
+            <input type="email" name="email" id="email" placeholder="email@example.com">
+          </p>
+          <p>
+            <label for="mail-body">Текст письма</label>
+            <input type="text" name="mail-body" id="mail-body" placeholder="В свободной форме">
+          </p>
+          <button class="button" type="submit">Отправить</button>
+        </form>
+        <button class="close-button" type="button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
       </section>
 
       <!--Карта-->
       <section class="modal modal-map">
         <h2 class="visually-hidden">Карта</h2>
-        <img src="img/map-big.jpg" width="960" height="559" alt="г. Москва, ул. Строителей, 15">
-        <span class="close-button">x</span>
+        <p>
+          <img src="img/map-big.jpg" width="960" height="559" alt="Магазин по адресу: г. Москва, ул. Строителей, 15">
+        </p>
+        <button class="close-button" type="button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
       </section>
 
     </body>
