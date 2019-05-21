@@ -1,0 +1,260 @@
+@font-face {
+  font-style: normal;
+  font-weight: 300;
+  font-family: "gilroy";
+
+  src: local("gilroylight"),
+  url("../fonts/web/gilroylight.woff2") format("woff2"),
+  url("../fonts/web/gilroylight.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 800;
+  font-family: "gilroy";
+
+  src: local("gilroyextrabold"),
+  url("../fonts/web/gilroyextrabold.woff2") format("woff2"),
+  url("../fonts/web/gilroyextrabold.woff") format("woff");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 30px;
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main-navigation {
+  background-color: #f7e296;
+}
+
+.search input{
+  letter-spacing: 0.2px;
+  color: #000000;
+
+  background-color: #f7e296;
+  border: none;
+}
+
+.search input::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.search input:hover::placeholder,
+.search input:focus::placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.search__button {
+  text-align: center;
+  vertical-align: middle;
+  color: #000000;
+
+  background-color: transparent;
+  border: 2px solid #000000;
+}
+
+.search__button:hover,
+.search__button:focus {
+  color: rgba(255, 255, 255, 1);
+
+  background-color: #000000;
+}
+
+.search__button:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.user-navigation {
+  color: #000000;
+
+  list-style: none;
+}
+
+.user-navigation a,
+.user-menu a {
+  font: inherit;
+  letter-spacing: 0.2px;
+
+  color: rgba(0, 0, 0, 1);
+}
+
+.main-navigation a:hover,
+.main-navigation a:focus {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.main-navigation a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.user-menu {
+  list-style: none;
+}
+
+.catalogue-button,
+.site-navigation a {
+  font-family: 'gilroy', Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 800;
+  letter-spacing: 3.6px;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 1)
+}
+
+.catalogue {
+  list-style: none;
+}
+
+.catalogue a {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: 36px;
+  letter-spacing: 0.2px;
+  color: #000000;
+}
+
+.catalogue-button a:hover,
+.catalogue-button a:focus,
+.catalogue a:hover,
+.catalogue a:focus,
+.site-navigation a:hover,
+.site-navigation a:focus {
+  opacity: 0.66;
+}
+
+.site-navigation {
+  list-style: none;
+}
+
+.section-header {
+  font-family: 'gilroy', Arial, Helvetica, sans-serif;
+  font-size: 47px;
+  line-height: 48px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: #000000;
+}
+
+.about p,
+.contacts p {
+  color: #464646;
+}
+
+.delivery {
+  font-family: 'gilroy', Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 40px;
+  font-weight: 800;
+  list-style: none;
+}
+
+.button {
+  font-family: 'gilroy', Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 800;
+  letter-spacing: 3.6px;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 1);
+
+  background-color: #f0c52e;
+  border: none;
+}
+
+.button:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.main-footer {
+  color: #ffffff;
+
+  background-color: #464646;
+}
+
+.user-navigation--footer a,
+.user-menu--footer a {
+  line-height: 36px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.user-navigation--footer a:hover,
+.user-menu--footer a:hover,
+.user-navigation--footer a:focus,
+.user-menu--footer a:focus {
+  color: rgba(255, 255, 255, 1);
+}
+
+.user-navigation--footer a:active,
+.user-menu--footer a:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.middle-footer-menu p {
+  font: inherit;
+  color: #ffffff;
+}
+
+.site-navigation--footer a {
+  color: rgba(255, 255, 255, 1);
+}
+
+.site-navigation--footer a:hover,
+.site-navigation--footer a:focus {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.site-navigation--footer a:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.social-icons {
+  list-style: none;
+}
+
+.modal {
+  box-shadow: 0 10px 20px 0 rgba(4, 6, 6, 0.2);
+}
+
+.write-us__form input {
+  font: inherit;
+  font-size: 14px;
+  line-height: 18px;
+  color: #464646;
+
+  background-color: #f2f2f2;
+  border: 3px solid transparent;
+}
+
+.write-us__form input::placeholder {
+  font: inherit;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(70, 70, 70, 0.4);
+}
+
+.write-us__form input:hover {
+  background-color: #eaeaea;
+}
+
+.write-us__form input:focus {
+  background-color: #ffffff;
+  border: 3px solid #f0c52e;
+}
+
+.write-us__form input:invalid {
+  background-color: #f6dada;
+}
