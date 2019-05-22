@@ -3,23 +3,27 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
+    <link rel="stylesheet" href="fonts/web/gilroyextrabold.woff2" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap&subset=latin,cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="main-header">
       <nav class="main-navigation">
-        <a href="index.html" class="main-logo">
+        <!--Логотип. Станет полноценной частью навигации на внутренней странице-->
+        <a href="#" class="main-logo">
           <img src="img/logo-device.svg" width="163" height="35" alt="Логотип интернет-магазина гаджетов «Девайс»">
         </a>
 
-        <!--Верхняя часть главной навигации (<div> в кач-ве обёртки)-->
+      <!--Верхняя часть главной навигации (<div> в кач-ве обёртки)-->
         <div class="top-menu">
           <!--Форма поиска-->
           <form class="search" action="https://echo.htmlacademy.ru/" method="GET">
             <label for="search" class="visually-hidden">Поиск по сайту</label>
             <input type="search" name="search" id="search" placeholder="Поиск по сайту">
-            <button type="submit">
-              <span class="visually-hidden">Найти</span>
-              <img src="img/search.svg" width="16" height="16" alt="Найти">
+            <button class="search__button" type="submit">
+              Найти
             </button>
           </form>
 
@@ -29,7 +33,7 @@
                 <li class="username">
                   <a href="#">Валентин петухов</a>
                 </li>
-                <li class="logout-link">
+                <li class="logout">
                   <a href="#">Выйти</a>
                 </li>
               </ul>
@@ -53,7 +57,7 @@
               <a href="#">Виртуальная реальность</a>
             </li>
             <li class="catalogue__link">
-              <a href="#">Моноподы для селфи</a>
+              <a href="catalogue.html">Моноподы для селфи</a>
             </li>
             <li class="catalogue__link">
               <a href="#">Экшн-камеры</a>
@@ -85,7 +89,7 @@
     </header>
 
     <main>
-      <h1 class="main-header">Моноподы для селфи</h1>
+      <h1 class="page-title">Моноподы для селфи</h1>
       <ul class="breadcrumbs">
         <li class="breadcrumbs__link">
           <a href="index.html">Главная</a>
@@ -103,12 +107,12 @@
       <section class="filter">
         <h2 class="visually-hidden">Фильтр</h2>
         <!--Зарезервировано под форму "Стоимость"-->
-        <form action="https://echo.htmlacademy.ru/" method="get">
+        <form class="filter__form" action="https://echo.htmlacademy.ru/" method="get">
           <fieldset>
             <legend>Цвет</legend>
-            <ul class="colors">
+            <ul class="filter__list">
               <li>
-                <input type="checkbox" name="color" id="black">
+                <input type="checkbox" name="color" id="black" checked>
                 <label for="black">Чёрный</label>
               </li>
               <li>
@@ -116,11 +120,11 @@
                 <label for="white">Белый</label>
               </li>
               <li>
-                <input type="checkbox" name="color" id="blue">
+                <input type="checkbox" name="color" id="blue" checked>
                 <label for="blue">Синий</label>
               </li>
               <li>
-                <input type="checkbox" name="color" id="red">
+                <input type="checkbox" name="color" id="red" checked>
                 <label for="red">Красный</label>
               </li>
               <li>
@@ -132,9 +136,9 @@
 
           <fieldset>
             <legend>Bluetooth</legend>
-            <ul class="bluetooth">
+            <ul class="filter__list">
               <li>
-                <input type="radio" name="bluetooth" id="bluetooth-true">
+                <input type="radio" name="bluetooth" id="bluetooth-true" checked>
                 <label for="bluetooth-true">Есть</label>
               </li>
               <li>
@@ -148,9 +152,9 @@
         </form>
       </section>
 
-      <section class="catalogue">
+      <section class="goods">
         <h2 class="visually-hidden">Список товаров</h2>
-        <ul class="catalogue__list">
+        <ul class="goods__list">
           <li class="item-card" tabindex="0">
             <!--Порядок отображения элементов будет изменён (<div> в кач-ве обёртки)-->
             <div class="item-card__panel">
@@ -203,8 +207,8 @@
 
         <!--Оверлей карточки, показываемый при наведении-->
         <div class="item-overlay visually-hidden">
-          <button class="button">В корзину</button>
-          <button class="button">Добавить к сравнению</button>
+          <a href="#" class="button">В корзину</a>
+          <a href="#" class="compare">Добавить к сравнению</a>
         </div>
       </section>
 
@@ -218,11 +222,11 @@
           </a>
           <ul class="user-navigation user-navigation--footer">
             <li class="user-navigation__link">
-              <ul class="user-menu">
+              <ul class="user-menu user-menu--footer">
                 <li class="username">
-                  <a href="#">Валентин петухов</a>
+                  <a href="#">Валентин Петухов</a>
                 </li>
-                <li class="logout-link">
+                <li class="logout--footer">
                   <a href="#">Выйти</a>
                 </li>
               </ul>
@@ -235,7 +239,6 @@
             </li>
           </ul>
         </nav>
-
         <!--Средняя часть футера (<div> в кач-ве обёртки)-->
         <div class="middle-footer-menu">
           <p>г. Москва, ул. Строителей, 15</p>
@@ -253,12 +256,10 @@
           </ul>
           <p>Тел.: +7 (495) 495-95-95</p>
         </div>
-
         <!--Нижняя часть футера (<div> в кач-ве обёртки)-->
         <div class="bottom-footer-menu">
           <!--Жёлтая полоса - скорее всего псевдо-элемент-->
           <span>-</span>
-
           <ul class="social-icons">
             <li class="social-icons__link">
               <a href="https://facebook.com/">
@@ -279,7 +280,6 @@
               </a>
             </li>
           </ul>
-
           <a href="https://htmlacademy.ru/intensive/htmlcss" class="academy-logo">
             <img src="img/logo-html.svg" width="27" height="35" alt="Логотип HTML Academy">
           </a>
@@ -289,38 +289,38 @@
       <!--Модальные окна-->
 
       <!--Напишите нам-->
-      <section class="modal">
-          <h2 class="visually-hidden">Напишите нам</h2>
-          <form action="https://echo.htmlacademy.ru/" method="POST">
-            <p>
-              <label for="username">Ваше имя:</label>
-              <input type="text" name="username" id="username" placeholder="Имя Фамилия">
-            </p>
-            <p>
-              <label for="email">Ваш e-mail</label>
-              <input type="email" name="email" id="email" placeholder="email@example.com">
-            </p>
-            <p>
-              <label for="mail-body">Текст письма</label>
-              <input type="text" name="mail-body" id="mail-body" placeholder="В свободной форме">
-            </p>
-            <button class="button" type="submit">Отправить</button>
-          </form>
-          <button class="close-button" type="button">
-            <span class="visually-hidden">Закрыть</span>
-          </button>
-        </section>
-
-        <!--Карта-->
-        <section class="modal modal-map">
-          <h2 class="visually-hidden">Карта</h2>
+      <section class="write-us modal">
+        <h2 class="visually-hidden">Напишите нам</h2>
+        <form class="write-us__form" action="https://echo.htmlacademy.ru/" method="POST">
           <p>
-            <img src="img/map-big.jpg" width="960" height="559" alt="Магазин по адресу: г. Москва, ул. Строителей, 15">
+            <label for="username">Ваше имя:</label>
+            <input type="text" name="username" id="username" placeholder="Имя Фамилия">
           </p>
-          <button class="close-button" type="button">
-            <span class="visually-hidden">Закрыть</span>
-          </button>
-        </section>
+          <p>
+            <label for="email">Ваш e-mail</label>
+            <input type="email" name="email" id="email" placeholder="email@example.com">
+          </p>
+          <p>
+            <label for="mail-body">Текст письма</label>
+            <input type="text" name="mail-body" id="mail-body" placeholder="В свободной форме">
+          </p>
+          <button class="button" type="submit">Отправить</button>
+        </form>
+        <button class="close-button" type="button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+      </section>
 
-      </body>
-    </html>
+      <!--Карта-->
+      <section class="modal-map modal">
+        <h2 class="visually-hidden">Карта</h2>
+        <p>
+          <img src="img/map-big.jpg" width="960" height="559" alt="Магазин по адресу: г. Москва, ул. Строителей, 15">
+        </p>
+        <button class="close-button" type="button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+      </section>
+
+    </body>
+  </html>
