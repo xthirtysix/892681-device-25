@@ -3,6 +3,10 @@
     <head>
       <meta charset="utf-8">
       <title>HTML Academy: Девайс</title>
+      <link rel="stylesheet" href="fonts/web/gilroyextrabold.woff2" type="text/css">
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap&subset=latin,cyrillic" rel="stylesheet">
+      <link rel="stylesheet" href="css/normalize.css">
+      <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
       <header class="main-header">
@@ -18,9 +22,8 @@
             <form class="search" action="https://echo.htmlacademy.ru/" method="GET">
               <label for="search" class="visually-hidden">Поиск по сайту</label>
               <input type="search" name="search" id="search" placeholder="Поиск по сайту">
-              <button type="submit">
-                <span class="visually-hidden">Найти</span>
-                <img src="img/search.svg" width="16" height="16" alt="Найти">
+              <button class="search__button" type="submit">
+                Найти
               </button>
             </form>
 
@@ -88,38 +91,40 @@
         <!--Зарезервировано под блоки, которые не нужно размечать на задании №2 :) -->
 
         <!--О нас-->
-        <section class="about">
-          <h2 class="section-header">О нас</h2>
-          <p class="about__description">
-            Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.
-          </p>
-          <p class="about__description">
-            Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:
-          </p>
-          <ul class="delivery">
-            <li class="delivery__item">Деловые линии</li>
-            <li class="delivery__item">Автотрейдинг</li>
-            <li class="delivery__item">ЖелДорЭкспедиция</li>
-          </ul>
-          <a href="#" class="button">
-            Подробнее о нас
-          </a>
-        </section>
-
-        <!--Контакты-->
-        <section class="contacts">
-          <h2 class="section-header">Контакты</h2>
-          <p class="contacts__description">
-            Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверитьработоспособность покупки. Всякое бывает.
-          </p>
-          <!--Карта - описательная часть адреса, поэтому обернул её в <p>-->
-          <p>
-            <a href=# class="map">
-              <img src="img/map.png" width="560" height="222" alt="Магазин по адресу: г. Москва, ул. Строителей, д. 15">
+        <div class="index-columns">
+          <section class="about">
+            <h2 class="section-header">О нас</h2>
+            <p class="about__description">
+              Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.
+            </p>
+            <p class="about__description">
+              Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:
+            </p>
+            <ul class="delivery">
+              <li class="delivery__item">Деловые линии</li>
+              <li class="delivery__item">Автотрейдинг</li>
+              <li class="delivery__item">ЖелДорЭкспедиция</li>
+            </ul>
+            <a href="#" class="button">
+              Подробнее о нас
             </a>
-          </p>
-          <a href="#" class="button">Напишите нам</a>
-        </section>
+          </section>
+
+          <!--Контакты-->
+          <section class="contacts">
+            <h2 class="section-header">Контакты</h2>
+            <p class="contacts__description">
+              Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверитьработоспособность покупки. Всякое бывает.
+            </p>
+            <!--Карта - описательная часть адреса, поэтому обернул её в <p>-->
+            <p>
+              <a href=# class="map">
+                <img src="img/map.png" width="560" height="222" alt="Магазин по адресу: г. Москва, ул. Строителей, д. 15">
+              </a>
+            </p>
+            <a href="#" class="button">Напишите нам</a>
+          </section>
+        </div>
       </main>
 
       <footer class="main-footer">
@@ -130,7 +135,7 @@
           </a>
           <ul class="user-navigation user-navigation--footer">
             <li class="user-navigation__link">
-              <ul class="user-menu">
+              <ul class="user-menu user-menu--footer">
                 <li class="login-link">
                   <a href="#">Вход</a>
                 </li>
@@ -194,9 +199,9 @@
       <!--Модальные окна-->
 
       <!--Напишите нам-->
-      <section class="modal">
+      <section class="write-us modal">
         <h2 class="visually-hidden">Напишите нам</h2>
-        <form action="https://echo.htmlacademy.ru/" method="POST">
+        <form class="write-us__form" action="https://echo.htmlacademy.ru/" method="POST">
           <p>
             <label for="username">Ваше имя:</label>
             <input type="text" name="username" id="username" placeholder="Имя Фамилия">
@@ -217,7 +222,7 @@
       </section>
 
       <!--Карта-->
-      <section class="modal modal-map">
+      <section class="modal-map modal">
         <h2 class="visually-hidden">Карта</h2>
         <p>
           <img src="img/map-big.jpg" width="960" height="559" alt="Магазин по адресу: г. Москва, ул. Строителей, 15">
