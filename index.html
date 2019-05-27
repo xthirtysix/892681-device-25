@@ -9,7 +9,7 @@
       <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-      <header class="main-header">
+      <header class="main-header container">
         <nav class="main-navigation">
           <!--Логотип. Станет полноценной частью навигации на внутренней странице-->
           <a href="#" class="main-logo">
@@ -85,13 +85,13 @@
         </nav>
       </header>
 
-      <main>
+      <main class="container">
         <h1 class="visually-hidden">Интернет-магазин гаджетов «Девайс»</h1>
 
         <!--Зарезервировано под блоки, которые не нужно размечать на задании №2 :) -->
 
-        <!--О нас-->
         <div class="index-columns">
+          <!--О нас-->
           <section class="about">
             <h2 class="section-header">О нас</h2>
             <p class="about__description">
@@ -111,6 +111,7 @@
           </section>
 
           <!--Контакты-->
+
           <section class="contacts">
             <h2 class="section-header">Контакты</h2>
             <p class="contacts__description">
@@ -129,70 +130,72 @@
 
       <footer class="main-footer">
         <!--Верхняя часть футера состоит из внутренних ссылок, поэтому выбрал <nav>-->
-        <nav class="top-footer-menu">
-          <a href="#" class="logo logo--footer">
-            <img src="img/logo-device.svg" width="163" height="35" alt="Логотип интернет-магазина гаджетов «Девайс»">
-          </a>
-          <ul class="user-navigation user-navigation--footer">
-            <li class="user-navigation__link">
-              <ul class="user-menu user-menu--footer">
-                <li class="login-link">
-                  <a href="#">Вход</a>
-                </li>
-              </ul>
-            </li>
-            <li class="user-navigation__link">
-              <a href="#">Сравнить</a>
-            </li>
-            <li class="user-navigation__link">
-              <a href="#">Корзина</a>
-            </li>
-          </ul>
-        </nav>
-        <!--Средняя часть футера (<div> в кач-ве обёртки)-->
-        <div class="middle-footer-menu">
-          <p>г. Москва, ул. Строителей, 15</p>
-          <!--Возможно нужен <nav>?-->
-          <ul class="site-navigation site-navigation--footer">
-            <li class="site-navigation__link">
-              <a href="#">Доставка</a>
-            </li>
-            <li class="site-navigation__link">
-              <a href="#">Гарантия</a>
-            </li>
-            <li class="site-navigation__link">
-              <a href="#">Контакты</a>
-            </li>
-          </ul>
-          <p>Тел.: +7 (495) 495-95-95</p>
-        </div>
-        <!--Нижняя часть футера (<div> в кач-ве обёртки)-->
-        <div class="bottom-footer-menu">
-          <!--Жёлтая полоса - скорее всего псевдо-элемент-->
-          <span>-</span>
-          <ul class="social-icons">
-            <li class="social-icons__link">
-              <a href="https://facebook.com/">
-                <img src="https://placehold.it/32x32" width="32" height="32" alt="Логотип Facebook">
-                <span class="visually-hidden" lang="en">Facebook</span>
-              </a>
-            </li>
-            <li class="social-icons__link">
-              <a href="https://instagram.com/">
-                <img src="https://placehold.it/32x32" width="32" height="32" alt="Логотип Instagram">
-                <span class="visually-hidden" lang="en">Instagram</span>
-              </a>
-            </li>
-            <li class="social-icons__link">
-              <a href="https://twitter.com/">
-                <img src="https://placehold.it/32x32" width="32" height="32" alt="Логотип Twitter">
-                <span class="visually-hidden" lang="en">Twitter</span>
-              </a>
-            </li>
-          </ul>
-          <a href="https://htmlacademy.ru/intensive/htmlcss" class="academy-logo">
-            <img src="img/logo-html.svg" width="27" height="35" alt="Логотип HTML Academy">
-          </a>
+        <div class="container">
+          <nav class="top-footer-menu">
+            <a href="#" class="logo logo--footer">
+              <img src="img/logo-device.svg" width="163" height="35" alt="Логотип интернет-магазина гаджетов «Девайс»">
+            </a>
+            <ul class="user-navigation user-navigation--footer">
+              <li class="user-navigation__link">
+                <ul class="user-menu user-menu--footer">
+                  <li class="login-link">
+                    <a href="#">Вход</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="user-navigation__link">
+                <a href="#">Сравнить</a>
+              </li>
+              <li class="user-navigation__link">
+                <a href="#">Корзина</a>
+              </li>
+            </ul>
+          </nav>
+          <!--Средняя часть футера (<div> в кач-ве обёртки)-->
+          <div class="middle-footer-menu">
+            <p>г. Москва, ул. Строителей, 15</p>
+            <!--Возможно нужен <nav>?-->
+            <ul class="site-navigation site-navigation--footer">
+              <li class="site-navigation__link">
+                <a href="#">Доставка</a>
+              </li>
+              <li class="site-navigation__link">
+                <a href="#">Гарантия</a>
+              </li>
+              <li class="site-navigation__link">
+                <a href="#">Контакты</a>
+              </li>
+            </ul>
+            <p>Тел.: +7 (495) 495-95-95</p>
+          </div>
+          <!--Нижняя часть футера (<div> в кач-ве обёртки)-->
+          <div class="bottom-footer-menu">
+            <!--Жёлтая полоса - скорее всего псевдо-элемент-->
+            <span>-</span>
+            <ul class="social-icons">
+              <li class="social-icons__link">
+                <a href="https://facebook.com/">
+                  <img src="https://placehold.it/32x32" width="32" height="32" alt="Логотип Facebook">
+                  <span class="visually-hidden" lang="en">Facebook</span>
+                </a>
+              </li>
+              <li class="social-icons__link">
+                <a href="https://instagram.com/">
+                  <img src="https://placehold.it/32x32" width="32" height="32" alt="Логотип Instagram">
+                  <span class="visually-hidden" lang="en">Instagram</span>
+                </a>
+              </li>
+              <li class="social-icons__link">
+                <a href="https://twitter.com/">
+                  <img src="https://placehold.it/32x32" width="32" height="32" alt="Логотип Twitter">
+                  <span class="visually-hidden" lang="en">Twitter</span>
+                </a>
+              </li>
+            </ul>
+            <a href="https://htmlacademy.ru/intensive/htmlcss" class="academy-logo">
+              <img src="img/logo-html.svg" width="27" height="35" alt="Логотип HTML Academy">
+            </a>
+          </div>
         </div>
       </footer>
 
