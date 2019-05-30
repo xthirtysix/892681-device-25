@@ -8,15 +8,15 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
-    <header class="main-header">
+  <body class="inner-page">
+    <header class="main-header container">
       <nav class="main-navigation">
         <!--Логотип. Станет полноценной частью навигации на внутренней странице-->
         <a href="#" class="main-logo">
           <img src="img/logo-device.svg" width="163" height="35" alt="Логотип интернет-магазина гаджетов «Девайс»">
         </a>
 
-      <!--Верхняя часть главной навигации (<div> в кач-ве обёртки)-->
+        <!--Верхняя часть главной навигации (<div> в кач-ве обёртки)-->
         <div class="top-menu">
           <!--Форма поиска-->
           <form class="search" action="https://echo.htmlacademy.ru/" method="GET">
@@ -88,134 +88,136 @@
       </nav>
     </header>
 
-    <main>
-      <h1 class="page-title">Моноподы для селфи</h1>
-      <ul class="breadcrumbs">
-        <li class="breadcrumbs__link">
-          <a href="index.html">Главная</a>
-        </li>
-        <li class="breadcrumbs__link">
-          <a href="#">Каталог товаров</a>
-        </li>
-        <li class="breadcrumbs__link breadcrumbs__link--current">
-          Моноподы для селфи
-        </li>
-      </ul>
-
-      <!--Зарезервировано для заголовка "Фильтр" и панели сортировки товаров-->
-
-      <section class="filter">
-        <h2 class="visually-hidden">Фильтр</h2>
-        <!--Зарезервировано под форму "Стоимость"-->
-        <form class="filter__form" action="https://echo.htmlacademy.ru/" method="get">
-          <fieldset>
-            <legend>Цвет</legend>
-            <ul class="filter__list">
-              <li>
-                <input type="checkbox" name="color" id="black" checked>
-                <label for="black">Чёрный</label>
-              </li>
-              <li>
-                <input type="checkbox" name="color" id="white">
-                <label for="white">Белый</label>
-              </li>
-              <li>
-                <input type="checkbox" name="color" id="blue" checked>
-                <label for="blue">Синий</label>
-              </li>
-              <li>
-                <input type="checkbox" name="color" id="red" checked>
-                <label for="red">Красный</label>
-              </li>
-              <li>
-                <input type="checkbox" name="color" id="pink">
-                <label for="pink">Розовый</label>
-              </li>
-            </ul>
-          </fieldset>
-
-          <fieldset>
-            <legend>Bluetooth</legend>
-            <ul class="filter__list">
-              <li>
-                <input type="radio" name="bluetooth" id="bluetooth-true" checked>
-                <label for="bluetooth-true">Есть</label>
-              </li>
-              <li>
-                <input type="radio" name="bluetooth" id="bluetooth-false">
-                <label for="bluetooth-true">Нет</label>
-              </li>
-            </ul>
-          </fieldset>
-
-          <button class="button" type="submit">Показать</button>
-        </form>
-      </section>
-
-      <section class="goods">
-        <h2 class="visually-hidden">Список товаров</h2>
-        <ul class="goods__list">
-          <li class="item-card" tabindex="0">
-            <!--Порядок отображения элементов будет изменён (<div> в кач-ве обёртки)-->
-            <div class="item-card__panel">
-              <h3 class="item-card__name">
-                <a href="#">Любительская селфи-палка</a>
-              </h3>
-              <b class="item-card__price">500 руб.</b>
-            </div>
-            <p class="item-card__image">
-              <img src="img/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
-            </p>
+    <main class="container">
+        <h1 class="page-title">Моноподы для селфи</h1>
+        <ul class="breadcrumbs">
+          <li class="breadcrumbs__link">
+            <a href="index.html">Главная</a>
           </li>
-
-          <li class="item-card" tabindex="0">
-            <div class="item-card__panel">
-              <h3 class="item-card__name">
-                <a href="#">Профессиональная селфи-палка</a>
-              </h3>
-              <b class="item-card__price">1 500 руб.</b>
-            </div>
-            <p class="item-card__image">
-              <img src="img/item-2.jpg" width="360" height="380" alt="Профессиональная">
-            </p>
+          <li class="breadcrumbs__link">
+            <a href="#">Каталог товаров</a>
           </li>
-
-          <li class="item-card" tabindex="0">
-            <div class="item-card__panel">
-              <h3 class="item-card__name">
-                <a href="#">Непотопляемая селфи-палка</a>
-              </h3>
-              <b class="item-card__price">2 500 руб.</b>
-            </div>
-            <p class="item-card__image">
-              <img src="img/item-3.jpg" width="360" height="380" alt="Непотопляемая селфи палка">
-            </p>
-          </li>
-
-          <li class="item-card" tabindex="0">
-            <div class="item-card__panel">
-              <h3 class="item-card__name">
-                <a href="#">Селфи-палка «Следуй за мной»</a>
-              </h3>
-              <b class="item-card__price">4 900 руб.</b>
-            </div>
-            <p class="item-card__image">
-              <img src="img/item-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
-            </p>
+          <li class="breadcrumbs__link breadcrumbs__link--current">
+            Моноподы для селфи
           </li>
         </ul>
+      <!--Зарезервировано для заголовка "Фильтр" и панели сортировки товаров-->
 
-        <!--Оверлей карточки, показываемый при наведении-->
-        <div class="item-overlay visually-hidden">
-          <a href="#" class="button">В корзину</a>
-          <a href="#" class="compare">Добавить к сравнению</a>
-        </div>
-      </section>
+      <div class="catalogue-columns">
+        <section class="filter">
+          <h2 class="visually-hidden">Фильтр</h2>
+          <!--Зарезервировано под форму "Стоимость"-->
+          <form class="filter__form" action="https://echo.htmlacademy.ru/" method="get">
+            <fieldset>
+              <legend>Цвет</legend>
+              <ul class="filter__list">
+                <li>
+                  <input type="checkbox" name="color" id="black" checked>
+                  <label for="black">Чёрный</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="color" id="white">
+                  <label for="white">Белый</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="color" id="blue" checked>
+                  <label for="blue">Синий</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="color" id="red" checked>
+                  <label for="red">Красный</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="color" id="pink">
+                  <label for="pink">Розовый</label>
+                </li>
+              </ul>
+            </fieldset>
+
+            <fieldset>
+              <legend>Bluetooth</legend>
+              <ul class="filter__list">
+                <li>
+                  <input type="radio" name="bluetooth" id="bluetooth-true" checked>
+                  <label for="bluetooth-true">Есть</label>
+                </li>
+                <li>
+                  <input type="radio" name="bluetooth" id="bluetooth-false">
+                  <label for="bluetooth-true">Нет</label>
+                </li>
+              </ul>
+            </fieldset>
+
+            <button class="button" type="submit">Показать</button>
+          </form>
+        </section>
+
+        <section class="goods">
+          <h2 class="visually-hidden">Список товаров</h2>
+          <ul class="goods__list">
+            <li class="item-card" tabindex="0">
+              <!--Порядок отображения элементов будет изменён (<div> в кач-ве обёртки)-->
+              <div class="item-card__panel">
+                <h3 class="item-card__name">
+                  <a href="#">Любительская селфи-палка</a>
+                </h3>
+                <b class="item-card__price">500 руб.</b>
+              </div>
+              <p class="item-card__image">
+                <img src="img/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
+              </p>
+            </li>
+
+            <li class="item-card" tabindex="0">
+              <div class="item-card__panel">
+                <h3 class="item-card__name">
+                  <a href="#">Профессиональная селфи-палка</a>
+                </h3>
+                <b class="item-card__price">1 500 руб.</b>
+              </div>
+              <p class="item-card__image">
+                <img src="img/item-2.jpg" width="360" height="380" alt="Профессиональная">
+              </p>
+            </li>
+
+            <li class="item-card" tabindex="0">
+              <div class="item-card__panel">
+                <h3 class="item-card__name">
+                  <a href="#">Непотопляемая селфи-палка</a>
+                </h3>
+                <b class="item-card__price">2 500 руб.</b>
+              </div>
+              <p class="item-card__image">
+                <img src="img/item-3.jpg" width="360" height="380" alt="Непотопляемая селфи палка">
+              </p>
+            </li>
+
+            <li class="item-card" tabindex="0">
+              <div class="item-card__panel">
+                <h3 class="item-card__name">
+                  <a href="#">Селфи-палка «Следуй за мной»</a>
+                </h3>
+                <b class="item-card__price">4 900 руб.</b>
+              </div>
+              <p class="item-card__image">
+                <img src="img/item-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
+              </p>
+            </li>
+          </ul>
+
+          <!--Оверлей карточки, показываемый при наведении-->
+          <div class="item-overlay visually-hidden">
+            <a href="#" class="button">В корзину</a>
+            <a href="#" class="compare">Добавить к сравнению</a>
+          </div>
+        </section>
+      </div>
 
     </main>
 
     <footer class="main-footer">
-        <!--Верхняя часть футера состоит из внутренних ссылок, поэтому выбрал <nav>-->
+      <!--Верхняя часть футера состоит из внутренних ссылок, поэтому выбрал <nav>-->
+      <div class="container">
         <nav class="top-footer-menu">
           <a href="#" class="logo logo--footer">
             <img src="img/logo-device.svg" width="163" height="35" alt="Логотип интернет-магазина гаджетов «Девайс»">
@@ -223,11 +225,8 @@
           <ul class="user-navigation user-navigation--footer">
             <li class="user-navigation__link">
               <ul class="user-menu user-menu--footer">
-                <li class="username">
-                  <a href="#">Валентин Петухов</a>
-                </li>
-                <li class="logout--footer">
-                  <a href="#">Выйти</a>
+                <li class="login-link">
+                  <a href="#">Вход</a>
                 </li>
               </ul>
             </li>
@@ -284,7 +283,9 @@
             <img src="img/logo-html.svg" width="27" height="35" alt="Логотип HTML Academy">
           </a>
         </div>
-      </footer>
+      </div>
+    </footer>
+
 
       <!--Модальные окна-->
 

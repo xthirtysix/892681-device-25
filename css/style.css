@@ -42,8 +42,17 @@ a {
 
 /*  <header>  */
 
+.container {
+  width: 1160px;
+  margin: auto;
+}
+
 .main-navigation {
+  margin-bottom: 45px;
+  padding: 0 60px;
+
   background-color: #f7e296;
+  border-bottom: 1px solid transparent;
 }
 
 .main-navigation a {
@@ -57,6 +66,24 @@ a {
 
 .main-navigation a:active {
   color: rgba(0, 0, 0, 0.3);
+}
+
+.main-logo {
+  display: block;
+  width: 163px;
+  height: 35px;
+  margin-bottom: 30px;
+}
+
+.top-menu,
+.bottom-menu {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.bottom-menu {
+  margin-bottom: 50px;
 }
 
 .search input {
@@ -104,8 +131,26 @@ a {
 }
 
 .user-navigation,
+.site-navigation,
 .user-menu {
+  margin: 0;
+  padding: 0;
+
   list-style: none;
+}
+
+.user-navigation,
+.site-navigation {
+  display: flex;
+  width: 500px;
+}
+
+.user-navigation__link:first-child {
+  margin-right: auto;
+}
+
+.site-navigation__link:last-child{
+  margin-left: auto;
 }
 
 .logout a {
@@ -130,6 +175,9 @@ a {
 }
 
 .catalogue {
+  margin: 0;
+  padding: 0;
+
   list-style: none;
 }
 
@@ -145,8 +193,17 @@ a {
 
 /*  <main>  */
 
+.index-columns {
+  display: flex;
+  justify-content: space-between;
+}
+
 .page-title,
 .section-header {
+  margin: 0;
+  margin-bottom: 55px;
+  padding: 0;
+
   font-family: 'gilroy', Arial, Helvetica, sans-serif;
   font-size: 47px;
   font-weight: 800;
@@ -155,7 +212,15 @@ a {
   color: #000000;
 }
 
+.inner-page .page-title {
+  margin-bottom: 35px;
+}
+
 .breadcrumbs {
+  margin: 0;
+  margin-bottom: 50px;
+  padding: 0;
+
   list-style: none;
 }
 
@@ -177,12 +242,40 @@ a {
   color: rgba(0, 0, 0, 0.1);
 }
 
+.about {
+  width: 500px;
+}
+
+.contacts {
+  width: 560px;
+}
+
 .about p,
 .contacts p {
+  margin: 0;
+  margin-bottom: 30px;
+
   color: #464646;
 }
 
+.contacts p {
+  margin-bottom: 40px;
+}
+
+.about p:last-of-type,
+.contacts p:last-of-type {
+  margin-bottom: 65px;
+}
+
+.about .button,
+.contacts .button {
+  margin-top: auto;
+}
+
 .delivery {
+  margin: 0;
+  padding: 0;
+
   font-family: 'gilroy', Arial, Helvetica, sans-serif;
   font-size: 16px;
   font-weight: 800;
@@ -209,16 +302,30 @@ a {
   color: rgba(0, 0, 0, 0.3);
 }
 
+/*  СЕТКА КАТАЛОГА  */
+.catalogue-columns {
+  display: flex;
+}
+
+.inner-wrapper-left {
+
+  background-color: #efefef;
+}
+
 /* ФИЛЬТР */
 
+.filter {
+  background-color: #efefef;
+}
+
 .filter__form {
+  width: 330px;
+
   font: inherit;
   font-size: 14px;
   line-height: 40px;
   letter-spacing: 0.1px;
   color: #000000;
-
-  background-color: #ebebeb;
 }
 
 .filter__form fieldset {
@@ -247,9 +354,26 @@ a {
 
 /*  СПИСОК ТОВАРОВ  */
 
+.goods {
+  width: 760px;
+  margin-left: 70px;
+}
+
 .goods__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  margin: 0;
+  padding: 0;
+
   list-style: none;
 }
+
+.item-card {
+  width: 360px;
+}
+
 
 .item-card__name a {
   font-family: 'gilroy', Arial, Helvetica, sans-serif;
@@ -309,9 +433,27 @@ a {
 /*  <footer>  */
 
 .main-footer {
+  margin-top: 70px;
+
   color: #ffffff;
 
   background-color: #464646;
+  border-top: 1px solid transparent;
+}
+
+.top-footer-menu {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 65px;
+  margin-bottom: 45px;
+}
+
+.user-navigation--footer {
+  width: auto;
+}
+
+.main-footer .user-navigation__link:first-child {
+  margin: 0;
 }
 
 .user-navigation--footer a,
@@ -345,9 +487,31 @@ a {
   color: rgba(238, 238, 238, 0.1);
 }
 
+.middle-footer-menu {
+  display: flex;
+  margin-bottom: 55px;
+}
+
 .middle-footer-menu p {
+  width: 300px;
+  margin: 0;
+  padding: 0;
+
   font: inherit;
   color: #ffffff;
+}
+
+.middle-footer-menu p:last-child {
+  text-align: right;
+}
+
+.site-navigation--footer {
+  width: auto;
+  margin: auto;
+}
+
+.middle-footer-menu .site-navigation__link:last-child {
+  margin: 0;
 }
 
 .site-navigation--footer a {
@@ -363,10 +527,23 @@ a {
   color: rgba(255, 255, 255, 0.3);
 }
 
+.bottom-footer-menu {
+  display: flex;
+}
+
 .social-icons {
+  display: flex;
+  margin: 0;
+  margin-left: calc(50% - 80px);
+  margin-bottom: 65px;
+  padding: 0;
+
   list-style: none;
 }
 
+.academy-logo {
+  margin-left: auto;
+}
 
 /* МОДАЛЬНЫЕ ОКНА */
 
