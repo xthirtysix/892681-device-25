@@ -5,9 +5,9 @@
   font-weight: 300;
   font-family: "Gilroy";
 
-  src: local("Gilroylight"),
-  url("../fonts/Gilroylight.woff2") format("woff2"),
-  url("../fonts/Gilroylight.woff") format("woff");
+  src: local("gilroylight"),
+  url("../fonts/gilroylight.woff2") format("woff2"),
+  url("../fonts/gilroylight.woff") format("woff");
 }
 
 @font-face {
@@ -15,9 +15,9 @@
   font-weight: 800;
   font-family: "Gilroy";
 
-  src: local("Gilroyextrabold"),
-  url("../fonts/Gilroyextrabold.woff2") format("woff2"),
-  url("../fonts/Gilroyextrabold.woff") format("woff");
+  src: local("gilroyextrabold"),
+  url("../fonts/gilroyextrabold.woff2") format("woff2"),
+  url("../fonts/gilroyextrabold.woff") format("woff");
 }
 
 /*  ОБЩАЯ СТИЛИЗАЦИЯ  */
@@ -46,7 +46,7 @@ img {
 }
 
 /*Контейнер-центровщик*/
-.container { 
+.container {
   width: 1160px;
   margin: auto;
 }
@@ -72,6 +72,13 @@ input[type="radio"].visually-hidden {
   overflow: hidden;
 }
 
+.gilroy {
+  font-family: 'Gilroy', Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 24px
+}
+
 /*  <header>  */
 
 .main-header {
@@ -91,13 +98,20 @@ input[type="radio"].visually-hidden {
 /* Лого */
 .main-logo {
   position: absolute;
-  top: -24px;
+  left: 59px;
+  top: -17px;
 
   width: 163px;
   height: 35px;
+}
 
-  font-size: 48px;
-  line-height: 48px;
+.main-logo:focus,
+.main-logo:hover {
+  opacity: 0.6;
+}
+
+.main-logo:active {
+  opacity: 0.3;
 }
 
 /*  Верхняя часть <header>  */
@@ -107,13 +121,6 @@ input[type="radio"].visually-hidden {
   margin-bottom: 39px;
 }
 
-.top-menu a {
-  font: inherit;
-  letter-spacing: 0.2px;
-  color: rgb(0, 0, 0);
-}
-
-/* Лого */
 .search {
   position: relative;
   width: 440px;
@@ -144,7 +151,7 @@ input[type="radio"].visually-hidden {
   letter-spacing: 0.2px;
   color: rgba(0, 0, 0, 1);
 
-  background-color: rgb(247, 226, 150);
+  background-color: transparent;
   border: none;
 }
 
@@ -154,6 +161,7 @@ input[type="radio"].visually-hidden {
 
 .search input::placeholder {
   font: inherit;
+  letter-spacing: 0.2px;
   color: rgba(0, 0, 0, 0.3);
 }
 
@@ -190,7 +198,7 @@ input[type="radio"].visually-hidden {
 .search input:focus ~ .search__underline,
 .search__button:focus ~ .search__underline {
   position: absolute;
-  left: 0px;
+  left: 0;
   bottom: -10px;
 
   width: 100%;
@@ -220,12 +228,49 @@ input[type="radio"].visually-hidden {
   margin-right: auto;
 }
 
-.user-menu span {
-  margin-left: 9px;
+.user-menu__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.user-menu__login,
+.user-navigation__link {
+  font: inherit;
+  letter-spacing: 0.2px;
+  color: rgba(0, 0, 0, 1);
 }
 
 .user-menu__logout {
   margin-left: 20px;
+
+  font: inherit;
+  letter-spacing: 0.2px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.user-menu__login:hover,
+.user-menu__login:focus,
+.user-navigation__link--header:hover,
+.user-navigation__link--header:focus {
+  opacity: 0.6;
+}
+
+.user-menu__logout:hover,
+.user-menu__logout:focus {
+  color: rgba(0, 0, 0, 1);
+}
+
+.user-menu__login:active,
+.user-navigation__link--header:active {
+  opacity: 0.3;
+}
+
+.user-menu__logout:active {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.user-menu span {
+  margin-left: 9px;
 }
 
 .user-navigation__link span {
@@ -254,19 +299,18 @@ input[type="radio"].visually-hidden {
   color: rgba(0, 0, 0, 1);
 }
 
-.catalogue-button a,
-.site-navigation__link a {
-  color: rgba(0, 0, 0, 1);
+.site-navigation__link {
+  line-height: 24px;
 }
 
-.catalogue-button a:hover,
-.catalogue-buttona a:focus
+.catalogue-button:hover,
+.catalogue-button:focus,
 .site-navigation__link a:hover,
 .site-navigation__link a:focus {
   color: rgba(0, 0, 0, 0.6);
 }
 
-.catalogue-button a:active,
+.catalogue-button:active,
 .site-navigation__link a:active {
   color: rgba(0, 0, 0, 0.3);
 }
@@ -279,22 +323,6 @@ input[type="radio"].visually-hidden {
 .site-navigation__link:last-child{
   margin-left: auto;
   margin-right: -4px;
-}
-
-
-/* Выравнивание ссылок в меню пользователя */
-.user-menu__list {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.user-menu__logout {
-  margin-left: 20px;
-}
-
-/* Кнопка "Выход" в меню пользователя */
-.user-menu__logout a {
-  color: rgba(0, 0, 0, 0.3);
 }
 
 /*  Нижняя часть <header> */
@@ -502,6 +530,11 @@ input[type="radio"].visually-hidden {
   margin-bottom: 25px;
 }
 
+.map img {
+  width: 560px;
+  height: 222px;
+}
+
 .about .button,
 .contacts .button {
   margin-top: auto;
@@ -552,7 +585,7 @@ input[type="radio"].visually-hidden {
 }
 
 .button {
-  width: 264px;
+  width: 260px;
   margin: 0;
   padding: 8px 0;
 
@@ -757,7 +790,7 @@ input[type="radio"].visually-hidden {
 .item-card__name,
 .item-card__name a {
   margin: 0;
-  
+
   font-family: 'Gilroy', Arial, Helvetica, sans-serif;
   font-size: 18px;
   font-weight: 800;
@@ -848,28 +881,19 @@ input[type="radio"].visually-hidden {
   margin-top: 59px;
   margin-bottom: 34px;
 }
+
 /* Логотип в футере */
 .main-logo--footer {
   position: relative;
-  top: -2px;
+  top: 5px;
   left: 0;
 
   margin: 0;
   padding: 0;
 }
 
-.main-logo--footer path,
-.user-navigation--footer path {
-  fill: rgb(240, 197, 46);
-}
-
-.main-logo--footer:focus,
-.main-logo--footer:hover {
-  opacity: 0.6;
-}
-
-.main-logo--footer:active {
-  opacity: 0.3;
+.main-logo--footer path {
+  fill: rgba(240, 197, 46, 1);
 }
 
 /* Навигация пользователя в футере*/
@@ -879,26 +903,62 @@ input[type="radio"].visually-hidden {
   width: 600px;
 }
 
-.user-navigation__link:last-child {
+.user-navigation--footer > li{
   margin-left: 40px;
 }
 
-.user-menu--footer {
-  margin-right: 46px;
+.user-navigation--footer > li:first-child {
+  margin-left: 0;
 }
 
-.user-navigation--footer a {
+.user-menu__login--footer,
+.user-navigation__link--footer {
   line-height: 36px;
+  color: rgba(255, 255, 255, 0.7);
 }
 
-.user-navigation--footer a {
-  color: rgba(255, 255, 255, 0.7);
+.user-menu__logout--footer {
+  line-height: 36px;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.user-navigation--footer path {
+  fill: rgba(240, 197, 46, 1);
+}
+
+.user-menu__login--footer:hover,
+.user-menu__login--footer:focus,
+.user-navigation__link--footer:hover,
+.user-navigation__link--footer:focus {
+  opacity: 1;
+  color: rgba(255, 255, 255, 1);
+}
+
+.user-menu__logout--footer:hover,
+.user-menu__logout--footer:focus {
+  color: rgba(255, 255, 255, 1);
+}
+
+.user-menu__login--footer:hover path,
+.user-menu__login--footer:focus path,
+.user-navigation__link--footer:hover path,
+.user-navigation__link--footer:focus path {
+  fill: rgba(240, 197, 46, 0.6);
+}
+
+.user-menu__login--footer:active,
+.user-navigation__link--footer:active {
+  opacity: 0.3;
+}
+
+.user-menu__logout--footer:active {
+  color: rgba(255, 255, 255, 0.1);
 }
 
 /* Средняя часть футера */
 .middle-footer-menu {
   display: flex;
-  margin-bottom: 56px;
+  margin-bottom: 62px;
 }
 
 .middle-footer-menu p {
@@ -963,7 +1023,7 @@ input[type="radio"].visually-hidden {
   justify-content: space-between;
   width: 140px;
   margin: auto;
-  margin-bottom: 65px;
+  margin-bottom: 58px;
   margin-top: 2px;
   padding: 0;
 
@@ -1021,9 +1081,6 @@ input[type="radio"].visually-hidden {
 }
 
 .write-us__form input::placeholder {
-  font: inherit;
-  font-size: 14px;
-  line-height: 18px;
   color: rgba(70, 70, 70, 0.4);
 }
 
@@ -1033,7 +1090,7 @@ input[type="radio"].visually-hidden {
 
 .write-us__form input:focus {
   background-color: rgb(255, 255, 255);
-  border: 3px solid rgba(240, 197, 46);
+  border: 3px solid rgba(240, 197, 46, 1);
 
   outline: none;
 }
