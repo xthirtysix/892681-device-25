@@ -367,6 +367,8 @@ input[type="radio"].visually-hidden {
 .catalogue {
   position: absolute;
   top: 25px;
+  visibility: hidden;
+  z-index: 99;
 
   display: flex;
   width: 1040px;
@@ -374,6 +376,13 @@ input[type="radio"].visually-hidden {
   padding: 20px 60px 34px;
 
   background-color: rgb(247, 226, 150);
+}
+
+.catalogue-button:hover ~ .catalogue,
+.catalogue-button:focus ~ .catalogue,
+.catalogue:hover,
+.catalogue:focus {
+  visibility: visible;
 }
 
 .catalogue__column {
@@ -400,6 +409,18 @@ input[type="radio"].visually-hidden {
   font: inherit;
   line-height: 36px;
   letter-spacing: 0.2px;
+  color: rgba(0, 0, 0, 1);
+}
+
+.catalogue__column a:hover,
+.catalogue__column a:focus {
+  color: rgba(0, 0, 0, 0.6);
+
+  transition: color .3s;
+}
+
+.catalogue__column a:active {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 /*  <main>  */
