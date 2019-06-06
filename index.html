@@ -23,10 +23,8 @@
             <label for="search">
               <span class="visually-hidden">Поиск по сайту</span>
             </label>
-            <input type="search" name="search" id="search" placeholder="Поиск по сайту">
-            <button class="search__button visually-hidden" type="submit">Найти</button>
-            <!--Декоративное подчёркивание формы поиска-->
-            <span class="search__underline"></span>
+            <input class="search__input" type="search" name="search" id="search" placeholder="Поиск по сайту">
+            <button class="search__button" type="submit">Найти</button>
           </form>
           <!--Навигация пользователя-->
           <ul class="user-navigation">
@@ -248,7 +246,7 @@
     <!--Модальные окна-->
 
     <!--Напишите нам-->
-    <section class="write-us modal">
+    <section class="write-us modal visually-hidden">
       <h2 class="visually-hidden">Напишите нам</h2>
       <form class="write-us__form" action="https://echo.htmlacademy.ru/" method="POST">
         <p>
@@ -261,7 +259,7 @@
         </p>
         <p>
           <label for="mail-body">Текст письма:</label>
-          <input type="text" name="mail-body" id="mail-body" placeholder="В свободной форме">
+          <textarea name="mail-body" id="mail-body" placeholder="В свободной форме"></textarea>
         </p>
         <button class="button" type="submit">Отправить</button>
       </form>
@@ -271,7 +269,7 @@
     </section>
 
     <!--Карта-->
-    <section class="modal-map modal">
+    <section class="modal-map modal visually-hidden">
       <h2 class="visually-hidden">Карта</h2>
       <p>
         <img src="img/map-big.jpg" width="960" height="559" alt="Магазин по адресу: г. Москва, ул. Строителей, 15">

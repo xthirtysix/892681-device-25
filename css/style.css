@@ -99,7 +99,7 @@ input[type="radio"].visually-hidden {
 .main-logo {
   position: absolute;
   left: 59px;
-  top: -17px;
+  top: -19px;
 
   width: 163px;
   height: 35px;
@@ -108,6 +108,7 @@ input[type="radio"].visually-hidden {
 .main-logo:focus,
 .main-logo:hover {
   opacity: 0.6;
+  transition: opacity .3s;
 }
 
 .main-logo:active {
@@ -118,26 +119,21 @@ input[type="radio"].visually-hidden {
 .top-menu {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 39px;
+  margin-bottom: 29px;
 }
 
+/*Форма поиска*/
 .search {
   position: relative;
   width: 440px;
 }
 
-/*Форма поиска*/
-.search label {
-  position: relative;
-  margin-left: 38px;
-}
-
-.search label::before {
+.search::before {
   content: "";
 
   position: absolute;
-  top: 3px;
-  left: -34px;
+  top: 8px;
+  left: 3px;
 
   width: 16px;
   height: 16px;
@@ -147,27 +143,38 @@ input[type="radio"].visually-hidden {
   background-position: 0 0;
 }
 
-.search input {
+.search__input {
+  width: 356px;
+  padding: 0;
+  padding-left: 38px;
+  padding-bottom: 8px;
+
+  font: inherit;
   letter-spacing: 0.2px;
   color: rgba(0, 0, 0, 1);
 
   background-color: transparent;
   border: none;
+  border-bottom: 2px solid transparent;
 }
 
-.search input:focus {
+.search__input:focus {
+  border-bottom-color: rgb(0, 0, 0);
+
+  transition: border-bottom-color .8s;
   outline: none;
 }
 
-.search input::placeholder {
+.search__input::placeholder {
   font: inherit;
   letter-spacing: 0.2px;
   color: rgba(0, 0, 0, 0.3);
 }
 
-.search input:hover::placeholder,
-.search input:focus::placeholder {
+.search__input:hover::placeholder,
+.search__input:focus::placeholder {
   color: rgba(0, 0, 0, 0.6);
+  transition: color .3s;
 }
 
 .search__button {
@@ -175,36 +182,34 @@ input[type="radio"].visually-hidden {
   top: -9px;
   right: 0;
 
-  margin: 0;
+  visibility: hidden;
+
   padding: 14px 17px;
 
   text-align: center;
   vertical-align: middle;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(0, 0, 0);
 
   background-color: transparent;
   border: 2px solid rgb(0, 0, 0);
+
+  outline: none;
+}
+
+.search__input:focus + .search__button {
+  visibility: visible;
 }
 
 .search__button:hover,
 .search__button:focus {
+  visibility: visible;
+
+  color: rgb(255, 255, 255);
   background-color: rgb(0, 0, 0);
 }
 
 .search__button:active {
   color: rgba(255, 255, 255, 0.3);
-}
-
-.search input:focus ~ .search__underline,
-.search__button:focus ~ .search__underline {
-  position: absolute;
-  left: 0;
-  bottom: -10px;
-
-  width: 100%;
-  height: 2px;
-
-  background-color: rgb(0, 0, 0);
 }
 
 /* Меню */
@@ -253,11 +258,13 @@ input[type="radio"].visually-hidden {
 .user-navigation__link--header:hover,
 .user-navigation__link--header:focus {
   opacity: 0.6;
+  transition: opacity .3s;
 }
 
 .user-menu__logout:hover,
 .user-menu__logout:focus {
   color: rgba(0, 0, 0, 1);
+  transition: color .3s;
 }
 
 .user-menu__login:active,
@@ -308,6 +315,7 @@ input[type="radio"].visually-hidden {
 .site-navigation__link a:hover,
 .site-navigation__link a:focus {
   color: rgba(0, 0, 0, 0.6);
+  transition: color .3s;
 }
 
 .catalogue-button:active,
@@ -472,6 +480,7 @@ input[type="radio"].visually-hidden {
 .breadcrumbs a:hover,
 .breadcrumbs a:focus {
   color: rgba(0, 0, 0, 0.6);
+  transition: color .3s;
 }
 
 .breadcrumbs a:active {
@@ -585,9 +594,13 @@ input[type="radio"].visually-hidden {
 }
 
 .button {
+  position: relative;
+  z-index: 1;
+
   width: 260px;
   margin: 0;
   padding: 8px 0;
+
 
   font-family: 'Gilroy', Arial, Helvetica, sans-serif;
   font-size: 18px;
@@ -598,14 +611,32 @@ input[type="radio"].visually-hidden {
   text-transform: uppercase;
   color: rgb(0, 0, 0);
 
-  background: linear-gradient(transparent 16px, rgb(240, 197, 46) 16px, rgb(240, 197, 46) 24px, transparent 24px);
   border: none;
 }
 
-.button:hover,
-.button:focus {
+.button::before {
+  content: "";
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: -1;
+
+  width: 100%;
+  height: 8px;
+
   background-color: rgb(240, 197, 46);
 }
+
+
+
+.button:hover::before,
+.button:focus::before {
+  height: 100%;
+  transition: height .3s;
+}
+
 
 .button:active {
   color: rgba(0, 0, 0, 0.3);
@@ -746,6 +777,8 @@ input[type="radio"].visually-hidden {
 }
 
 .filter .button {
+  background-color: transparent;
+
   width: 100%;
 }
 
@@ -802,6 +835,7 @@ input[type="radio"].visually-hidden {
 .item-card__name a:hover,
 .item-card__name a:focus {
   color: rgba(0, 0, 0, 0.6);
+  transition: color .3s;
 }
 
 .item-card__name a:active {
@@ -844,6 +878,7 @@ input[type="radio"].visually-hidden {
 .compare:hover,
 .compare:focus {
   color: rgba(0, 0, 0, 1);
+  transition: color .3s;
 }
 
 .compare:active {
@@ -932,11 +967,13 @@ input[type="radio"].visually-hidden {
 .user-navigation__link--footer:focus {
   opacity: 1;
   color: rgba(255, 255, 255, 1);
+  transition: color .3s;
 }
 
 .user-menu__logout--footer:hover,
 .user-menu__logout--footer:focus {
   color: rgba(255, 255, 255, 1);
+  transition: color .3s;
 }
 
 .user-menu__login--footer:hover path,
@@ -944,6 +981,7 @@ input[type="radio"].visually-hidden {
 .user-navigation__link--footer:hover path,
 .user-navigation__link--footer:focus path {
   fill: rgba(240, 197, 46, 0.6);
+  transition: fill .3s;
 }
 
 .user-menu__login--footer:active,
@@ -996,6 +1034,7 @@ input[type="radio"].visually-hidden {
 .site-navigation--footer a:hover,
 .site-navigation--footer a:focus {
   color: rgba(255, 255, 255, 0.6);
+  transition: color .3s;
 }
 
 .site-navigation--footer a:active {
@@ -1037,6 +1076,7 @@ input[type="radio"].visually-hidden {
 .social-icons a:hover,
 .social-icons a:focus {
   opacity: 0.6;
+  transition: opacity .3s;
 }
 
 .social-icons a:active {
@@ -1058,6 +1098,7 @@ input[type="radio"].visually-hidden {
 .academy-logo:hover,
 .academy-logo:focus {
   opacity: 0.6;
+  transition: opacity .3s;
 }
 
 .academy-logo:active {
@@ -1066,11 +1107,91 @@ input[type="radio"].visually-hidden {
 
 /* МОДАЛЬНЫЕ ОКНА */
 
+
+
 .modal {
+  position: fixed;
+  z-index: 100;
+
+  color: rgb(0, 0, 0);
+
+  background-color: rgb(255, 255, 255);
   box-shadow: 0 10px 20px 0 rgba(4, 6, 6, 0.2);
 }
 
-.write-us__form input {
+.write-us {
+  top: 120px;
+  left: 50%;
+
+  box-sizing: border-box;
+  width: 960px;
+  margin-left: -480px;
+  padding: 90px 100px 70px;
+}
+
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 22px;
+
+  width: 55px;
+  height: 55px;
+
+  font-size: 0;
+
+  background-color: transparent;
+  background-image: url("../img/modal-close.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  border: 0;
+
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.close-button:hover,
+.close-button:focus {
+  opacity: 1;
+}
+
+.close-button:active {
+  opacity: 0.3;
+}
+
+.write-us__form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.write-us__form p {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  margin-bottom: 30px;
+
+  width: 360px;
+}
+
+.write-us__form p:last-of-type {
+  width: 100%;
+
+}
+
+.write-us__form label {
+  margin-bottom: 7px;
+
+  font-family: 'Gilroy', Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 24px;
+  color: rgb(0, 0, 0);
+}
+
+.write-us__form input,
+.write-us__form textarea {
+  padding: 14px 20px;
+
   font: inherit;
   font-size: 14px;
   line-height: 18px;
@@ -1080,29 +1201,50 @@ input[type="radio"].visually-hidden {
   border: 3px solid transparent;
 }
 
-.write-us__form input::placeholder {
+.write-us__form input::placeholder,
+.write-us__form textarea::placeholder {
   color: rgba(70, 70, 70, 0.4);
 }
 
-.write-us__form input:hover {
+.write-us__form input:hover,
+.write-us__form textarea:hover {
   background-color: rgb(234, 234, 234);
 }
 
-.write-us__form input:focus {
+.write-us__form input:focus,
+.write-us__form textarea:focus {
   background-color: rgb(255, 255, 255);
   border: 3px solid rgba(240, 197, 46, 1);
 
   outline: none;
 }
 
-.write-us__form input:invalid {
+.write-us__form input:invalid,
+.write-us__form textarea:invalid {
   background-color: rgb(246, 218, 218);
 }
 
-.write-us__form label {
-  font-family: 'Gilroy', Arial, Helvetica, sans-serif;
-  font-size: 18px;
-  font-weight: 800;
-  line-height: 24px;
-  color: rgb(0, 0, 0);
+.write-us__form textarea {
+  min-height: 110px;
+  padding: 20px 20px;
+}
+
+.write-us__form button {
+  width: 200px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.modal-map {
+  top: 120px;
+  left: 50%;
+
+  width: 960px;
+  margin-left: -480px;
+}
+
+.modal-map p {
+  width: 960px;
+  height: 559px;
+  margin: 0;
 }
