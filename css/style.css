@@ -101,6 +101,7 @@ input[type="radio"].visually-hidden {
   left: 59px;
   top: -19px;
 
+  display: block;
   width: 163px;
   height: 35px;
 }
@@ -555,6 +556,69 @@ input[type="radio"].visually-hidden {
   opacity: 0.3;
 }
 
+/* Брэнды */
+.brands {
+  margin-bottom: 40px;
+}
+
+.brands__list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 40px 0;
+
+  list-style: none;
+}
+
+.brands__link,
+.brands__link img {
+  width: 260px;
+  height: 100px;
+}
+
+.brands__link{
+  display: block;
+  position: relative;
+}
+
+.brands__link::after {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 260px;
+  height: 100px;
+
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  z-index: 999;
+}
+
+.brands__link--dji::after {
+  background-image: url("../img/logo-1-grayscale.jpg");
+}
+
+.brands__link--sp::after {
+  background-image: url("../img/logo-2-grayscale.jpg")
+}
+
+.brands__link--gopro::after {
+  background-image: url("../img/logo-3-grayscale.jpg")
+}
+
+.brands__link--vive::after {
+  background-image: url("../img/logo-4-grayscale.jpg")
+}
+
+.brands__link:hover::after,
+.brands__link:focus::after {
+  opacity: 0;
+  transition: opacity .8s;
+}
+
 /* Разделение главной на 2 колонки */
 .index-columns {
   display: flex;
@@ -967,6 +1031,7 @@ input[type="radio"].visually-hidden {
 
   list-style: none;
 }
+
 /* Карточка товара */
 .item-card {
   display: flex;
@@ -1059,6 +1124,7 @@ input[type="radio"].visually-hidden {
 /*  <footer>  */
 
 .main-footer {
+  min-width: 1200px;
   margin-top: 82px;
 
   color: rgb(255, 255, 255);
