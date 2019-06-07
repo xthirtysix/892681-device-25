@@ -501,7 +501,7 @@ input[type="radio"].visually-hidden {
 .breadcrumbs a:hover,
 .breadcrumbs a:focus {
   color: rgba(0, 0, 0, 0.6);
-  transition: color .3s;
+  transition: color .2s;
 }
 
 .breadcrumbs a:active {
@@ -790,9 +790,20 @@ input[type="radio"].visually-hidden {
   border-radius: 50%;
 }
 /* Фокус чекбоксов и радиокнопок */
+
+.filter__checkbox:hover + label::before,
+.filter__checkbox:hover + label::after,
+.filter__radio:hover + label::before,
+.filter__radio:hover + label::after,
+.filter__radio:focus + label::before,
+.filter__radio:focus + label::after {
+  opacity: 0.6;
+}
+
 .filter__checkbox:focus + label::before,
 .filter__checkbox:focus + label::after,
 .filter__radio:focus + label::before {
+  opacity: 0.6;
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
 }
