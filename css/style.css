@@ -73,13 +73,6 @@ input[type="radio"].visually-hidden {
   overflow: hidden;
 }
 
-.gilroy {
-  font-family: 'Gilroy', Arial, Helvetica, sans-serif;
-  font-size: 18px;
-  font-weight: 800;
-  line-height: 24px
-}
-
 /*  <header>  */
 
 .main-header {
@@ -87,7 +80,7 @@ input[type="radio"].visually-hidden {
 
   margin-top: 40px;
   margin-bottom: 60px;
-  padding: 34px 0;
+  padding: 34px 0 50px 0;
 
   background: rgb(247, 226, 150);
 }
@@ -101,7 +94,7 @@ input[type="radio"].visually-hidden {
 .main-logo {
   position: absolute;
   left: 59px;
-  top: -19px;
+  top: -17px;
 
   display: block;
   width: 163px;
@@ -131,6 +124,7 @@ input[type="radio"].visually-hidden {
 
 .search {
   position: relative;
+
   width: 440px;
 }
 
@@ -138,7 +132,7 @@ input[type="radio"].visually-hidden {
   content: "";
 
   position: absolute;
-  top: 16px;
+  top: 17px;
   left: 3px;
 
   width: 16px;
@@ -151,9 +145,8 @@ input[type="radio"].visually-hidden {
 
 .search__input {
   width: 357px;
-  padding: 9px 0;
+  padding: 9px 0 9px 38px;
   padding-left: 38px;
-  height: 50px; /*  Не понимаю почему, но без этого вёрстка ломается в IE11*/
 
   font: inherit;
   letter-spacing: 0.2px;
@@ -163,6 +156,8 @@ input[type="radio"].visually-hidden {
   border: none;
   border-bottom: 2px solid transparent;
 }
+
+:-ms-fullscreen, :root .search__input { height: 50px; } /*Фикс для IE11*/
 
 .search__input:focus {
   border-bottom-color: rgb(0, 0, 0);
