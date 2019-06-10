@@ -26,7 +26,7 @@ body {
   margin: 0;
   padding: 0;
 
-  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-size: 15px;
   font-weight: 300;
@@ -79,7 +79,7 @@ input[type="radio"].visually-hidden {
   position: relative;
 
   margin-top: 40px;
-  padding: 34px 0 50px 0;
+  padding: 34px 0 164px 0;
 
   background: rgb(247, 226, 150);
 }
@@ -93,7 +93,7 @@ input[type="radio"].visually-hidden {
 .main-logo {
   position: absolute;
   left: 59px;
-  top: -17px;
+  top: -19px;
 
   display: block;
   width: 163px;
@@ -278,6 +278,7 @@ input[type="radio"].visually-hidden {
 }
 
 .user-menu span {
+  padding: 0;
   margin-left: 9px;
 }
 
@@ -285,9 +286,7 @@ input[type="radio"].visually-hidden {
   margin-left: 7px;
 }
 
-.user-navigation__link--header {
-  margin: 0;
-}
+
 
 .user-navigation__link--header:last-child {
   margin-left: 40px;
@@ -297,7 +296,7 @@ input[type="radio"].visually-hidden {
 
 .catalogue-button,
 .site-navigation__link a {
-  font-family: 'Gilroy', Arial, Helvetica, sans-serif;
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
   font-size: 18px;
   font-weight: 800;
   line-height: 24px;
@@ -332,7 +331,6 @@ input[type="radio"].visually-hidden {
 
 .site-navigation__link:last-child{
   margin-left: auto;
-  margin-right: -4px;
 }
 
 /*  Нижняя часть <header> */
@@ -371,7 +369,7 @@ input[type="radio"].visually-hidden {
 
 .catalogue {
   position: absolute;
-  top: 25px;
+  top: 26px;
   left: 0;
   visibility: hidden;
   z-index: 99;
@@ -433,6 +431,13 @@ input[type="radio"].visually-hidden {
 
 /*  Главный слайдер  */
 
+.main-slider {
+  position: relative;
+  top: -112px;
+
+  margin-bottom: -20px;
+}
+
 .main-slider__list {
   margin: 0;
   padding: 0;
@@ -441,28 +446,42 @@ input[type="radio"].visually-hidden {
 }
 
 .main-slider__slide {
-  display: flex;
+  position: relative;
 
-  background: linear-gradient(to bottom, rgb(247, 226, 150) 0, rgb(247, 226, 150) 113px, rgb(255, 255, 255) 113px);
+  display: flex;
+  justify-content: space-between;
+  min-height: 500px;
+
+  background-color: transparent;
 }
 
 .main-slider__container {
-  width: 580px;
+  width: 560px;
+
   text-align: center;
 }
 
+.main-slider__container--left {
+  align-self: center;
+}
+
 .main-slider__container--right {
-  padding-top: 35px;
+  padding-top: 79px;
+}
+
+.main-slider__slide--1,
+.main-slider__slide--3 {
+  display: none;
 }
 
 .main-slider__slide--1 img {
   width: 384px;
   height: 486px;
-  margin-top: 3px;
-  margin-left: -16px;
+
 }
 
 .main-slider__slide--2 img {
+  vertical-align: middle;
   width: 345px;
   height: 485px;
 }
@@ -473,59 +492,150 @@ input[type="radio"].visually-hidden {
 }
 
 .main-slider__header {
+  position: relative;
+
   width: 400px;
-  margin-bottom: 30px;
+  margin: 0;
+  margin-bottom: 19px;
 
   font-family: Gilroy, Arial, Helvetica, sans-serif;
   font-size: 47px;
   font-weight: 800;
   font-style: normal;
   font-stretch: normal;
-  line-height: 1.19;
+  line-height: 56px;
   letter-spacing: 0.5px;
   text-align: left;
-  color: #000000;
+  color: rgb(0, 0, 0);
+}
+
+.main-slider__header::before {
+  content: "";
+
+  position: absolute;
+  top: -42px;
+  left: 0;
+
+  width: 100px;
+  height: 7px;
+
+  background-color: rgb(255, 255, 255);
 }
 
 .main-slider__description {
-  width: 480px;
+  width: 490px;
   margin: 0;
-  margin-bottom: 55px;
+  margin-bottom: 43px;
 
   font: inherit;
+  letter-spacing: 0.2px;
   text-align: left;
 }
 
 .main-slider__interactive-bar {
   display: flex;
   align-items: baseline;
-  justify-content: space-between;
+  margin-bottom: 47px;
+}
+
+.main-slider__interactive-bar .button {
+  width: 220px;
 }
 
 .main-slider__navigation {
   display: flex;
-  
+
   margin: 0;
+  margin-left: 180px;
   padding: 0;
 
   list-style: none;
 }
 
-.main-slider__switcher {
+.main-slider__switcher + label {
+  position: relative;
+
   display: block;
   width: 10px;
   height: 10px;
-  margin-right: 15px;
+  margin-right: 21px;
 
   background-color: transparent;
-  border: 2px solid rgb(0, 0, 0);
+  border: 1px solid rgb(0, 0, 0);
   border-radius: 50%;
+}
+
+.main-slider__switcher:checked + label::after {
+  content: "";
+
+  position: absolute;
+  top: 3px;
+  left: 3px;
+
+  width: 2px;
+  height: 2px;
+
+  background-color: transparent;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 50%;
+}
+
+
+.main-slider__switcher:hover + label,
+.main-slider__switcher:focus + label {
+  opacity: 0.6;
+}
+
+.main-slider__switcher:focus + label {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+.main-slider__options-table {
+  border: none;
+  margin-left: -2px;
+}
+
+.table-value {
+  padding-right: 74px;
+
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-size: 36px;
+  font-weight: 300;
+  line-height: 48px;
+  letter-spacing: 0.4px;
+  text-align: left;
+  color: rgb(0, 0, 0);
+}
+
+.table-argument {
+  padding-top: 4px;
+
+  font: inherit;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+  text-align: left;
+  color: rgb(70, 70, 70);
+}
+
+.main-slider__number {
+  position: absolute;
+  top: -14px;
+  right: 45px;
+
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+  font-size: 179px;
+  font-weight: 800;
+  line-height: 179px;
+  letter-spacing: 1.8px;
+  color: rgb(255, 255, 255);
 }
 
 /*  Категории  */
 
 .categories {
-  margin-bottom: 80px;
+  margin-bottom: 85px;
 }
 
 .categories__container {
@@ -547,11 +657,16 @@ input[type="radio"].visually-hidden {
   margin-left: 40px;
 }
 
+.categories__link p {
+  margin: 0;
+}
+
 .categories__icon {
   position: relative;
 
   width: 100%;
   height: 160px;
+  margin-bottom: 33px;
 
   background-color: rgba(240, 197, 46, 0.5);
 }
@@ -652,10 +767,110 @@ input[type="radio"].visually-hidden {
   opacity: 0.3;
 }
 
+/*  Услуги  */
+
+.services {
+  padding-bottom: 63px;
+  margin-bottom: 55px;
+
+  background-image: linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 96px, rgb(229, 229, 229) 96px, rgb(229, 229, 229) 100%);
+}
+
+.services__container {
+  display: flex;
+}
+
+.services__list {
+  position: relative;
+  min-width: 277px;
+  min-height: 320px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+
+  border-right: 7px solid rgb(0, 0, 0);
+
+  list-style: none;
+}
+
+.services__tab {
+  margin: 12px 0;
+}
+
+.services__tab--current {
+  background-color: rgb(0, 0, 0);
+}
+
+.services__tab .button {
+  width: 160px;
+}
+
+.services__tab--current .button {
+  color: rgb(247, 226, 150);
+}
+
+.services__tab--current .button::before {
+  background-color: transparent;
+}
+
+.services__slider {
+  width: 100%;
+  margin: 0;
+  margin-left: 116px;
+  padding: 0;
+
+  list-style: none;
+}
+
+.services__slide {
+  min-height: 196px;
+  padding-top: 69px;
+}
+
+.services__slide .section-header {
+  margin-bottom: 31px;
+}
+
+.services__slide--delivery {
+  background-image: url("../img/delivery.svg");
+  background-size: 136px 164px;
+  background-repeat: no-repeat;
+  background-position: top 81px right 66px;
+}
+
+.services__slide--warranty {
+  background-image: url("../img/warranty.svg");
+  background-size: 171px 194px;
+  background-repeat: no-repeat;
+  background-position: top 57px right 47px;
+}
+
+.services__slide--credit {
+  background-image: url("../img/credit.svg");
+  background-size: 156px 186px;
+  background-repeat: no-repeat;
+  background-position: top 58px right 70px;
+}
+
+.services__slide--credit,
+.services__slide--warranty {
+  display: none;
+}
+
+.services__description {
+  margin: 0;
+  padding-right: 323px;
+
+  letter-spacing: 0.2px;
+}
+
 /*  Брэнды  */
 
 .brands {
-  margin-bottom: 40px;
+  margin-bottom: 105px;
 }
 
 .brands__list {
@@ -915,6 +1130,7 @@ input[type="radio"].visually-hidden {
   position: relative;
   z-index: 1;
 
+  display: block;
   width: 260px;
   margin: 0;
   padding: 8px 0;
@@ -1274,6 +1490,7 @@ input[type="radio"].visually-hidden {
 /*  Навигация пользователя в футере  */
 
 .user-navigation--footer {
+  padding: 0;
   display: flex;
   justify-content: flex-end;
   width: 600px;
