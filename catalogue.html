@@ -9,7 +9,7 @@
   </head>
   <!--Внутренная страница-->
   <body class="inner-page">
-    <header class="main-header container">
+    <header class="main-header main-header--inner container">
       <nav class="main-navigation">
         <!--Логотип-->
         <a href="index.html" class="main-logo">
@@ -136,16 +136,29 @@
 
       <!--Обёртка для сложного градиентного фона-->
       <div class="inner-wrapper">
-
         <div class="index-columns container">
           <!--Фильтр-->
           <section class="filter">
-            <h2 class="visually-hidden">Фильтр</h2>
+            <h2 class="filter__header">Фильтр:</h2>
             <form class="filter__form" action="https://echo.htmlacademy.ru/" method="GET">
               <!--Зарезервировано под форму "Стоимость"-->
               <!--Набор чекбоксов-->
               <fieldset>
-                <legend>Цвет</legend>
+                <legend class="filter__section-header filter__section-header--price">Стоимость</legend>
+                <div class="progress-bar">
+                  <span class="progress-bar__indicator"></span>
+                  <span class="progress-bar__toggle" tabindex="0"><span class="visually-hidden">Ползунок: минимальная стоимость товара</span></span>
+                  <span class="progress-bar__toggle" tabindex="0"><span class="visually-hidden">Ползунок: максимальная стоимость товара</span></span>
+                </div>
+                <div class="price-range">
+                  <label for="min-num">от</label>
+                  <input id="min-num" type="number" min="0" value="0">
+                  <label for="max-num">до</label>
+                  <input id="max-num" type="number" value="5000">
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend class="filter__section-header">Цвет</legend>
                 <ul class="filter__list">
                   <li>
                     <input class="filter__checkbox visually-hidden" type="checkbox" name="color" id="black" checked>
@@ -171,7 +184,7 @@
               </fieldset>
               <!--Набор радио-кнопок-->
               <fieldset>
-                <legend>Bluetooth</legend>
+                <legend class="filter__section-header">Bluetooth</legend>
                 <ul class="filter__list">
                   <li>
                     <input class="filter__radio visually-hidden" type="radio" name="bluetooth" id="bluetooth-true">
@@ -190,6 +203,27 @@
           <!--Каталог товаров-->
           <section class="goods">
             <h2 class="visually-hidden">Список товаров</h2>
+            <section class="sort">
+              <h2 class="sort__header">Сортировка:</h2>
+              <ul class="sort__list">
+                <li><a href="#" class="sort__link sort__link--current">По цене</a></li>
+                <li><a href="#" class="sort__link">По типу</a></li>
+                <li><a href="#" class="sort__link">По популярности</a></li>
+                <li>
+                  <ul class="sort__order">
+                    <li>
+                      <span class="visually-hidden">По убыванию</span>
+                      <button class="sort__button"></button>
+                    </li>
+                    <li>
+                      <span class="visually-hidden">По возрастанию</span>
+                      <button class="sort__button sort__button--down sort__button--current"></button>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </section>
+
             <div class="goods__container">
               <!--Карточка товара 1-->
               <ul class="goods__list">
@@ -201,9 +235,15 @@
                     </h3>
                     <b class="item-card__price">500 руб.</b>
                   </div>
-                  <p class="item-card__image">
-                    <img src="img/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
-                  </p>
+                  <div class="item-card__image" tabindex="0">
+                    <img src="img/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка" tabindex="-1">
+                    <div class="item-overlay">
+                      <div class="item-overlay__container">
+                        <a href="#" class="button">В корзину</a>
+                        <a href="#" class="compare">Добавить к сравнению</a>
+                      </div>
+                    </div>
+                  </div>
                 </li>
 
                 <!--Карточка товара 2-->
@@ -214,9 +254,15 @@
                     </h3>
                     <b class="item-card__price">1 500 руб.</b>
                   </div>
-                  <p class="item-card__image">
+                  <div class="item-card__image" tabindex="0">
                     <img src="img/item-2.jpg" width="360" height="380" alt="Профессиональная">
-                  </p>
+                    <div class="item-overlay">
+                      <div class="item-overlay__container">
+                        <a href="#" class="button">В корзину</a>
+                        <a href="#" class="compare">Добавить к сравнению</a>
+                      </div>
+                    </div>
+                  </div>
                 </li>
 
                 <!--Карточка товара 3-->
@@ -227,9 +273,15 @@
                     </h3>
                     <b class="item-card__price">2 500 руб.</b>
                   </div>
-                  <p class="item-card__image">
+                  <div class="item-card__image" tabindex="0">
                     <img src="img/item-3.jpg" width="360" height="380" alt="Непотопляемая селфи палка">
-                  </p>
+                    <div class="item-overlay">
+                      <div class="item-overlay__container">
+                        <a href="#" class="button">В корзину</a>
+                        <a href="#" class="compare">Добавить к сравнению</a>
+                      </div>
+                    </div>
+                  </div>
                 </li>
 
                 <!--Карточка товара 4-->
@@ -240,18 +292,31 @@
                     </h3>
                     <b class="item-card__price">4 900 руб.</b>
                   </div>
-                  <p class="item-card__image">
+                  <div class="item-card__image" tabindex="0">
                     <img src="img/item-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
-                  </p>
+                    <div class="item-overlay">
+                      <div class="item-overlay__container">
+                        <a href="#" class="button">В корзину</a>
+                        <a href="#" class="compare">Добавить к сравнению</a>
+                      </div>
+                    </div>
+                  </div>
                 </li>
               </ul>
             </div>
 
-            <!--Оверлей карточки, показываемый при наведении-->
-            <div class="item-overlay visually-hidden">
-              <a href="#" class="button">В корзину</a>
-              <a href="#" class="compare">Добавить к сравнению</a>
+            <div class="paginator">
+              <a href="#" class="paginator__link paginator__button">Назад</a>
+              <ul class="paginator__list">
+                <li><a href="#" class="paginator__link paginator__link--current">1</a></li>
+                <li><a href="#" class="paginator__link">2</a></li>
+                <li><a href="#" class="paginator__link paginator__link--last">3</a></li>
+              </ul>
+              <a href="#" class="paginator__link paginator__button">Вперёд</a>
             </div>
+
+            <!--Оверлей карточки, показываемый при наведении-->
+
           </section>
         </div>
       </div>
