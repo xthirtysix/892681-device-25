@@ -324,10 +324,10 @@
             <h2 class="section-header">Контакты</h2>
             <p class="contacts__description">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверитьработоспособность покупки. Всякое бывает.</p>
             <!--Карта - описательная часть адреса, поэтому обернул её в <p>-->
-            <p><a href=# class="map">
+            <p><a href="map.html" class="map">
               <img src="img/map.png" width="560" height="222" alt="Магазин по адресу: г. Москва, ул. Строителей, д. 15">
             </a></p>
-            <a href="#" class="button">Напишите нам</a>
+            <a href="writeus.html" class="button button--write-us">Напишите нам</a>
           </section>
         </div>
       </div>
@@ -434,7 +434,7 @@
     <!--Модальные окна-->
 
     <!--Напишите нам-->
-    <section class="write-us modal visually-hidden">
+    <section class="write-us modal">
       <h2 class="visually-hidden">Напишите нам</h2>
       <form class="write-us__form" action="https://echo.htmlacademy.ru/" method="POST">
         <p>
@@ -451,21 +451,24 @@
         </p>
         <button class="button" type="submit">Отправить</button>
       </form>
-      <button class="close-button" type="button">
+      <button class="close-button write-us__close" type="button">
         <span class="visually-hidden">Закрыть</span>
       </button>
     </section>
 
     <!--Карта-->
-    <section class="modal-map modal visually-hidden">
+    <section class="modal-map modal">
       <h2 class="visually-hidden">Карта</h2>
       <p>
-        <img src="img/map-big.jpg" width="960" height="559" alt="Магазин по адресу: г. Москва, ул. Строителей, 15">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1125488779976!2d37.52742931592807!3d55.687030980535816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1560356410598!5m2!1sru!2sru" width="960" height="559" style="border:0" allowfullscreen></iframe>
       </p>
-      <button class="close-button" type="button">
+      <button class="close-button map__close" type="button">
         <span class="visually-hidden">Закрыть</span>
       </button>
     </section>
 
+    <div class="modal-overlay"></div>
+
+    <script src="js/script.js"></script>
   </body>
 </html>
