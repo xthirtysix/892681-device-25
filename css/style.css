@@ -1151,6 +1151,7 @@ input[type="radio"].visually-hidden {
   text-transform: uppercase;
   color: rgb(0, 0, 0);
 
+  background-color: transparent;
   border: none;
 }
 
@@ -2054,12 +2055,31 @@ input[type="radio"].visually-hidden {
 
 .modal {
   position: fixed;
-  z-index: 100;
+  z-index: 9001;
+
+  display: none;
 
   color: rgb(0, 0, 0);
 
   background-color: rgb(255, 255, 255);
   box-shadow: 0 10px 20px 0 rgba(4, 6, 6, 0.2);
+}
+
+.modal-overlay {
+  position: fixed;
+  z-index: 9000;
+  top: 0;
+  left: 0;
+
+  display: none;
+  width: 100%;
+  height: 100%;
+
+  background-color: transparent;
+}
+
+.modal-overlay--show {
+  display: block;
 }
 
 .write-us {
@@ -2191,4 +2211,28 @@ input[type="radio"].visually-hidden {
   width: 960px;
   height: 559px;
   margin: 0;
+}
+
+
+.modal--show {
+  display: block;
+  animation-name: zoomin;
+  animation-duration: .4s;
+}
+
+
+@keyframes zoomin {
+  0%  {transform: scale(0);  }
+  50% {transform: scale(1);}
+}
+
+.modal--error {
+  animation-name: shake;
+  animation-duration: .4s;
+}
+
+@keyframes shake {
+  0%, 100%                  {transform: translateX(0);      }
+  10%, 30%, 50%, 70%, 90%   {transform: translateX(-10px);  }
+  20%, 40%, 60%, 80%        {transform: translateX(10px);   }
 }
