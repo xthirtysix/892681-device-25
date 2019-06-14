@@ -14,101 +14,68 @@
         <a href="#" class="main-logo">
           <img src="img/logo-device.svg" width="163" height="35" alt="Логотип интернет-магазина гаджетов «Девайс»">
         </a>
-
         <!--Верхняя часть главной навигации-->
         <div class="top-menu">
           <!--Форма поиска-->
           <form class="search" action="https://echo.htmlacademy.ru/" method="GET">
-            <label for="search">
-              <span class="visually-hidden">Поиск по сайту</span>
-            </label>
+            <label for="search"><span class="visually-hidden">Поиск по сайту</span></label>
             <input class="search__input" type="search" name="search" id="search" placeholder="Поиск по сайту">
             <button class="search__button" type="submit">Найти</button>
           </form>
           <!--Навигация пользователя-->
           <ul class="user-navigation">
-            <li class="user-menu user-menu--header">
-              <ul class="user-menu__list">
+            <li>
+              <a href="#" class="user-navigation__login">Войти</a>
+            </li>
+          </ul>
+          <a href="#" class="top-menu__link top-menu__link--header top-menu__link--compare">Сравнить</a>
+          <a href="#" class="top-menu__link top-menu__link--header top-menu__link--cart">Корзина</a>
+        </div>
+        <!--Нижняя часть главной навигации-->
+        <ul class="bottom-menu site-navigation">
+          <li class="site-navigation__item">
+            <a href="#" class="catalogue-button site-navigation__link">Каталог товаров</a>
+            <!--Каталог товаров. Скрыт до клика по соответствующей ссылке-->
+            <div class="catalogue">
+              <!--Колонка 1-->
+              <ul class="catalogue__column">
                 <li>
-                  <a href="#" class="user-menu__login">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12">
-                      <path fill="#272525" d="M.032 12h12.937c-.163-2.643-2.074-4.837-4.671-5.543a3.47 3.47 0 0 0 1.687-2.972 3.485 3.485 0 0 0-6.97 0c0 1.264.68 2.361 1.688 2.972C2.106 7.163.194 9.357.032 12z"/>
-                    </svg>
-                    <span>Войти</span>
-                  </a>
+                  <a href="#" class="catalogue__link">Виртуальная реальность</a>
+                </li>
+                <li>
+                  <a href="catalogue.html" class="catalogue__link">Моноподы для селфи</a>
+                </li>
+                <li>
+                  <a href="#" class="catalogue__link">Экшн-камеры</a>
                 </li>
               </ul>
-            </li>
-            <li>
-              <a href="#" class="user-navigation__link user-navigation__link--header">
-                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10">
-                  <path d="M8 2h1.984v8H8zM0 3h1.984v7H0zM4 0h2v10H4z"/>
-                </svg>
-              <span>Сравнить</span>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="user-navigation__link user-navigation__link--header">
-                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
-                  <path d="M11.864 3.017a.429.429 0 0 0-.327-.154H9.225V4.09c0 .563-.484 1.022-1.08 1.022-.594 0-1.078-.458-1.078-1.022V2.863H4.909V4.09c0 .563-.485 1.022-1.08 1.022-.595 0-1.078-.458-1.078-1.022V2.863H.438a.43.43 0 0 0-.327.154.472.472 0 0 0-.108.358l.776 7.134c.015.806.642 1.455 1.411 1.455h7.595c.77 0 1.396-.649 1.411-1.455l.776-7.134a.476.476 0 0 0-.108-.358z"/>
-                  <path d="M3.829 4.499c.239 0 .433-.184.433-.409V1.84c0-.632.672-1.022 1.295-1.022h1.079c.655 0 1.078.401 1.078 1.022v2.25c0 .225.194.409.431.409.239 0 .433-.184.433-.409V1.84C8.577.773 7.761 0 6.636 0H5.557c-1.19 0-2.159.826-2.159 1.84v2.25c0 .225.194.409.431.409z"/>
-                </svg>
-                <span>Корзина</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <!--Нижняя часть главной навигации-->
-        <div class="bottom-menu">
-
-          <a href="#" class="catalogue-button">Каталог товаров</a>
-
-          <!--Каталог товаров. Скрыт до клика по соответствующей ссылке-->
-          <div class="catalogue">
-            <!--Колонка 1-->
-            <ul class="catalogue__column">
-              <li class="catalogue__link">
-                <a href="#">Виртуальная реальность</a>
-              </li>
-              <li class="catalogue__link">
-                <a href="catalogue.html">Моноподы для селфи</a>
-              </li>
-              <li class="catalogue__link">
-                <a href="#">Экшн-камеры</a>
-              </li>
-            </ul>
-            <!--Колонка 2-->
-            <ul class="catalogue__column">
-              <li class="catalogue__link">
-                <a href="#">Фитнес-браслеты</a>
-              </li>
-              <li class="catalogue__link">
-                <a href="#">Умные часы</a>
-              </li>
-            </ul>
-            <!--Колонка 3-->
-            <ul class="catalogue__column">
-              <li class="catalogue__link">
-                <a href="#">Квадрокоптеры</a>
-              </li>
-            </ul>
-          </div>
-
-          <!--Навигация по сайту-->
-          <ul class="site-navigation">
-            <li class="site-navigation__link">
-              <a href="#">Доставка</a>
-            </li>
-            <li class="site-navigation__link">
-              <a href="#">Гарантия</a>
-            </li>
-            <li class="site-navigation__link">
-              <a href="#">Контакты</a>
-            </li>
-          </ul>
-
-        </div>
+              <!--Колонка 2-->
+              <ul class="catalogue__column">
+                <li>
+                  <a href="#" class="catalogue__link">Фитнес-браслеты</a>
+                </li>
+                <li class="catalogue__link">
+                  <a href="#" class="catalogue__link">Умные часы</a>
+                </li>
+              </ul>
+              <!--Колонка 3-->
+              <ul class="catalogue__column">
+                <li>
+                  <a href="#" class="catalogue__link">Квадрокоптеры</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="site-navigation__item">
+            <a href="#" class="site-navigation__link">Доставка</a>
+          </li>
+          <li class="site-navigation__item">
+            <a href="#" class="site-navigation__link">Гарантия</a>
+          </li>
+          <li class="site-navigation__item">
+            <a href="#" class="site-navigation__link">Контакты</a>
+          </li>
+        </ul>
       </nav>
     </header>
 
@@ -122,22 +89,22 @@
                 <img src="img/slider-1.png" width="384" height="486" alt="Самая длинная селфи-палка!">
               </div>
               <div class="main-slider__container main-slider__container--right">
-                <h3 class="main-slider__header">Делай селфи,<br>как Бен Стиллер!</h3>
+                <b class="main-slider__header">Делай селфи,<br>как Бен Стиллер!</b>
                 <p class="main-slider__description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
                 <div class="main-slider__interactive-bar">
                   <a href="catalogue.html" class="button">Подробнее</a>
                   <ul class="main-slider__navigation">
                     <li>
-                      <input class="main-slider__switcher visually-hidden" id="slide-1" type="radio" name="main-slider__radio" checked>
-                      <label for="slide-1"><span class="visually-hidden">Первый слайд</span></label>
+                      <input class="main-slider__switcher visually-hidden" id="slide-1-1" type="radio" name="main-slider__radio-1" checked>
+                      <label for="slide-1-1"><span class="visually-hidden">Первый слайд</span></label>
                     </li>
                     <li>
-                      <input class="main-slider__switcher visually-hidden" id="slide-2" type="radio" name="main-slider__radio">
-                      <label for="slide-2"><span class="visually-hidden">Второй слайд</span></label>
+                      <input class="main-slider__switcher visually-hidden" id="slide-1-2" type="radio" name="main-slider__radio-1">
+                      <label for="slide-1-2"><span class="visually-hidden">Второй слайд</span></label>
                     </li>
                     <li>
-                      <input class="main-slider__switcher visually-hidden" id="slide-3" type="radio" name="main-slider__radio">
-                      <label for="slide-3"><span class="visually-hidden">Третий слайд</span></label>
+                      <input class="main-slider__switcher visually-hidden" id="slide-1-3" type="radio" name="main-slider__radio-1">
+                      <label for="slide-1-3"><span class="visually-hidden">Третий слайд</span></label>
                     </li>
                   </ul>
                 </div>
@@ -161,10 +128,24 @@
                 <img src="img/slider-2.png" width="345" height="485" alt="Самый мотивирующий фитнес-браслет!">
               </div>
               <div class="main-slider__container main-slider__container--right">
-                <h3 class="main-slider__header">Худеем правильно!</h3>
+                <b class="main-slider__header">Худеем правильно!</b>
                 <p class="main-slider__description">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
                 <div class="main-slider__interactive-bar">
                   <a href="catalogue.html" class="button">Подробнее</a>
+                  <ul class="main-slider__navigation">
+                    <li>
+                      <input class="main-slider__switcher visually-hidden" id="slide-2-1" type="radio" name="main-slider__radio-2">
+                      <label for="slide-2-1"><span class="visually-hidden">Первый слайд</span></label>
+                    </li>
+                    <li>
+                      <input class="main-slider__switcher visually-hidden" id="slide-2-2" type="radio" name="main-slider__radio-2" checked>
+                      <label for="slide-2-2"><span class="visually-hidden">Второй слайд</span></label>
+                    </li>
+                    <li>
+                      <input class="main-slider__switcher visually-hidden" id="slide-2-3" type="radio" name="main-slider__radio-2">
+                      <label for="slide-2-3"><span class="visually-hidden">Третий слайд</span></label>
+                    </li>
+                  </ul>
                 </div>
                 <table class="main-slider__options-table">
                   <tr>
@@ -175,22 +156,36 @@
                   </tr>
                 </table>
               </div>
-              <span class="main-slider__number">02</span>
+              <span class="main-slider__number main-slider__number--2">02</span>
             </li>
             <li class="main-slider__slide main-slider__slide--3">
               <div class="main-slider__container main-slider__container--left">
                 <img src="img/slider-3.png" width="526" height="334" alt="Самый боевой квадрокоптер!">
               </div>
               <div class="main-slider__container main-slider__container--right">
-                <h3 class="main-slider__header">Порхает как бабочка,<br>жалит как пчела!</h3>
-                <p class="main-slider__description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
+                <b class="main-slider__header">Порхает как бабочка,<br>жалит как пчела!</b>
+                <p class="main-slider__description">Этот обычный, на первый взгляд, квадрокоптер оснащен<br> мощным лазером, замаскированным под стандартную камеру.</p>
                 <div class="main-slider__interactive-bar">
                   <a href="catalogue.html" class="button">Подробнее</a>
+                  <ul class="main-slider__navigation">
+                    <li>
+                      <input class="main-slider__switcher visually-hidden" id="slide-3-1" type="radio" name="main-slider__radio-3">
+                      <label for="slide-3-1"><span class="visually-hidden">Первый слайд</span></label>
+                    </li>
+                    <li>
+                      <input class="main-slider__switcher visually-hidden" id="slide-3-2" type="radio" name="main-slider__radio-3">
+                      <label for="slide-3-2"><span class="visually-hidden">Второй слайд</span></label>
+                    </li>
+                    <li>
+                      <input class="main-slider__switcher visually-hidden" id="slide-3-3" type="radio" name="main-slider__radio-3" checked>
+                      <label for="slide-3-3"><span class="visually-hidden">Третий слайд</span></label>
+                    </li>
+                  </ul>
                 </div>
                 <table class="main-slider__options-table">
                   <tr>
-                    <td class="table-value">800 м</td>
-                    <td class="table-value">50 м</td>
+                    <td class="table-value table-value--3">800 м</td>
+                    <td class="table-value table-value--3">50 м</td>
                   </tr>
                   <tr>
                     <td class="table-argument">Дальность полёта</td>
@@ -198,7 +193,7 @@
                   </tr>
                 </table>
               </div>
-              <span class="main-slider__number">03</span>
+              <span class="main-slider__number main-slider__number--3">03</span>
             </li>
           </ul>
         </section>
@@ -246,7 +241,6 @@
           </div>
         </section>
       </div>
-
       <section class="services">
         <h2 class="visually-hidden">Услуги</h2>
         <div class="container services__container">
@@ -304,7 +298,6 @@
             </li>
           </ul>
         </section>
-
         <div class="index-columns">
           <!--О нас-->
           <section class="about">
@@ -318,11 +311,10 @@
             </ul>
             <a href="#" class="button">Подробнее о нас</a>
           </section>
-
           <!--Контакты-->
           <section class="contacts">
             <h2 class="section-header">Контакты</h2>
-            <p class="contacts__description">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверитьработоспособность покупки. Всякое бывает.</p>
+            <p class="contacts__description">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
             <!--Карта - описательная часть адреса, поэтому обернул её в <p>-->
             <p><a href="map.html" class="map">
               <img src="img/map.png" width="560" height="222" alt="Магазин по адресу: г. Москва, ул. Строителей, д. 15">
@@ -336,7 +328,7 @@
     <footer class="main-footer">
         <div class="container">
           <!--Верхняя часть футера-->
-          <div class="top-footer-menu">
+          <div class="top-footer">
             <!--Логотип-->
             <a href="#" class="main-logo main-logo--footer">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 164 35">
@@ -346,40 +338,16 @@
             </a>
             <!--Пользовательская навигация-->
             <ul class="user-navigation user-navigation--footer">
-              <li class="user-menu user-menu--footer">
-                <ul class="user-menu__list">
-                  <li>
-                    <a href="#" class="user-menu__login user-menu__login--footer">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12">
-                        <path fill="#272525" d="M.032 12h12.937c-.163-2.643-2.074-4.837-4.671-5.543a3.47 3.47 0 0 0 1.687-2.972 3.485 3.485 0 0 0-6.97 0c0 1.264.68 2.361 1.688 2.972C2.106 7.163.194 9.357.032 12z"/>
-                      </svg>
-                      <span>Войти</span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
               <li>
-                <a href="#" class="user-navigation__link user-navigation__link--footer">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10">
-                    <path d="M8 2h1.984v8H8zM0 3h1.984v7H0zM4 0h2v10H4z"/>
-                  </svg>
-                  <span>Сравнить</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="user-navigation__link user-navigation__link--footer">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
-                    <path d="M11.864 3.017a.429.429 0 0 0-.327-.154H9.225V4.09c0 .563-.484 1.022-1.08 1.022-.594 0-1.078-.458-1.078-1.022V2.863H4.909V4.09c0 .563-.485 1.022-1.08 1.022-.595 0-1.078-.458-1.078-1.022V2.863H.438a.43.43 0 0 0-.327.154.472.472 0 0 0-.108.358l.776 7.134c.015.806.642 1.455 1.411 1.455h7.595c.77 0 1.396-.649 1.411-1.455l.776-7.134a.476.476 0 0 0-.108-.358z"/>
-                    <path d="M3.829 4.499c.239 0 .433-.184.433-.409V1.84c0-.632.672-1.022 1.295-1.022h1.079c.655 0 1.078.401 1.078 1.022v2.25c0 .225.194.409.431.409.239 0 .433-.184.433-.409V1.84C8.577.773 7.761 0 6.636 0H5.557c-1.19 0-2.159.826-2.159 1.84v2.25c0 .225.194.409.431.409z"/>
-                  </svg>
-                  <span>Корзина</span>
-                </a>
+                <a href="#" class="user-navigation__login user-navigation__login--footer">Войти</a>
               </li>
             </ul>
+            <a href="#" class="top-footer__link top-footer__link--compare">Сравнить</a>
+            <a href="#" class="top-footer__link top-footer__link--cart">Корзина</a>
           </div>
 
           <!--Средняя часть футера (<div> в кач-ве обёртки)-->
-          <div class="middle-footer-menu">
+          <div class="middle-footer">
             <!--Адрес-->
             <p>г. Москва, ул. Строителей, 15</p>
             <!--Навигация по сайту-->
@@ -399,7 +367,7 @@
           </div>
 
           <!--Нижняя часть футера-->
-          <div class="bottom-footer-menu">
+          <div class="bottom-footer">
             <!--Жёлтая декоративная линия-->
             <span class="yellow-line"></span>
             <!--Сcылки на соцсети-->
@@ -462,7 +430,7 @@
       <p>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1125488779976!2d37.52742931592807!3d55.687030980535816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1560356410598!5m2!1sru!2sru" width="960" height="559" style="border:0" allowfullscreen></iframe>
       </p>
-      <button class="close-button map__close" type="button">
+      <button class="close-button modal-map__close" type="button">
         <span class="visually-hidden">Закрыть</span>
       </button>
     </section>

@@ -6,7 +6,7 @@ var closeWriteUs = document.querySelector('.write-us__close');
 
 var map = document.querySelector('.modal-map');
 var openMap = document.querySelector('.map');
-var closeMap = document.querySelector('.map__close');
+var closeMap = document.querySelector('.modal-map__close');
 
 var form = writeUs.querySelector('form');
 var username = writeUs.querySelector('[name=username]');
