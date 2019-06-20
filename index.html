@@ -5,13 +5,13 @@
     <title>HTML Academy: Девайс</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap&subset=latin,cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
     <header class="main-header container">
       <nav class="main-navigation">
         <!--Логотип-->
-        <a href="#" class="main-logo">
+        <a class="main-logo">
           <img src="img/logo-device.svg" width="163" height="35" alt="Логотип интернет-магазина гаджетов «Девайс»">
         </a>
         <!--Верхняя часть главной навигации-->
@@ -83,31 +83,16 @@
       <div class="container">
         <h1 class="visually-hidden">Интернет-магазин гаджетов «Девайс»</h1>
         <section class="main-slider">
+          <h2 class="visually-hidden">Промо слайдер</h2>
           <ul class="main-slider__list">
             <li class="main-slider__slide main-slider__slide--1">
               <div class="main-slider__container main-slider__container--left">
                 <img src="img/slider-1.png" width="384" height="486" alt="Самая длинная селфи-палка!">
               </div>
               <div class="main-slider__container main-slider__container--right">
-                <b class="main-slider__header">Делай селфи,<br>как Бен Стиллер!</b>
-                <p class="main-slider__description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-                <div class="main-slider__interactive-bar">
-                  <a href="catalogue.html" class="button">Подробнее</a>
-                  <ul class="main-slider__navigation">
-                    <li>
-                      <input class="main-slider__switcher visually-hidden" id="slide-1-1" type="radio" name="main-slider__radio-1" checked>
-                      <label for="slide-1-1"><span class="visually-hidden">Первый слайд</span></label>
-                    </li>
-                    <li>
-                      <input class="main-slider__switcher visually-hidden" id="slide-1-2" type="radio" name="main-slider__radio-1">
-                      <label for="slide-1-2"><span class="visually-hidden">Второй слайд</span></label>
-                    </li>
-                    <li>
-                      <input class="main-slider__switcher visually-hidden" id="slide-1-3" type="radio" name="main-slider__radio-1">
-                      <label for="slide-1-3"><span class="visually-hidden">Третий слайд</span></label>
-                    </li>
-                  </ul>
-                </div>
+                <b class="main-slider__header">Делай селфи,<br> как Бен Стиллер!</b>
+                <p class="main-slider__description main-slider__description--1">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+                <a href="catalogue.html" class="button main-slider__button">Подробнее</a>
                 <table class="main-slider__options-table">
                   <tr>
                     <td class="table-value">8,5 м</td>
@@ -128,25 +113,9 @@
                 <img src="img/slider-2.png" width="345" height="485" alt="Самый мотивирующий фитнес-браслет!">
               </div>
               <div class="main-slider__container main-slider__container--right">
-                <b class="main-slider__header">Худеем правильно!</b>
-                <p class="main-slider__description">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
-                <div class="main-slider__interactive-bar">
-                  <a href="catalogue.html" class="button">Подробнее</a>
-                  <ul class="main-slider__navigation">
-                    <li>
-                      <input class="main-slider__switcher visually-hidden" id="slide-2-1" type="radio" name="main-slider__radio-2">
-                      <label for="slide-2-1"><span class="visually-hidden">Первый слайд</span></label>
-                    </li>
-                    <li>
-                      <input class="main-slider__switcher visually-hidden" id="slide-2-2" type="radio" name="main-slider__radio-2" checked>
-                      <label for="slide-2-2"><span class="visually-hidden">Второй слайд</span></label>
-                    </li>
-                    <li>
-                      <input class="main-slider__switcher visually-hidden" id="slide-2-3" type="radio" name="main-slider__radio-2">
-                      <label for="slide-2-3"><span class="visually-hidden">Третий слайд</span></label>
-                    </li>
-                  </ul>
-                </div>
+                <b class="main-slider__header">Худеем<br> правильно!</b>
+                <p class="main-slider__description main-slider__description--2">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
+                <a href="catalogue.html" class="button main-slider__button">Подробнее</a>
                 <table class="main-slider__options-table">
                   <tr>
                     <td class="table-value">48 часов</td>
@@ -163,25 +132,9 @@
                 <img src="img/slider-3.png" width="526" height="334" alt="Самый боевой квадрокоптер!">
               </div>
               <div class="main-slider__container main-slider__container--right">
-                <b class="main-slider__header">Порхает как бабочка,<br>жалит как пчела!</b>
-                <p class="main-slider__description">Этот обычный, на первый взгляд, квадрокоптер оснащен<br> мощным лазером, замаскированным под стандартную камеру.</p>
-                <div class="main-slider__interactive-bar">
-                  <a href="catalogue.html" class="button">Подробнее</a>
-                  <ul class="main-slider__navigation">
-                    <li>
-                      <input class="main-slider__switcher visually-hidden" id="slide-3-1" type="radio" name="main-slider__radio-3">
-                      <label for="slide-3-1"><span class="visually-hidden">Первый слайд</span></label>
-                    </li>
-                    <li>
-                      <input class="main-slider__switcher visually-hidden" id="slide-3-2" type="radio" name="main-slider__radio-3">
-                      <label for="slide-3-2"><span class="visually-hidden">Второй слайд</span></label>
-                    </li>
-                    <li>
-                      <input class="main-slider__switcher visually-hidden" id="slide-3-3" type="radio" name="main-slider__radio-3" checked>
-                      <label for="slide-3-3"><span class="visually-hidden">Третий слайд</span></label>
-                    </li>
-                  </ul>
-                </div>
+                <b class="main-slider__header">Порхает как бабочка, жалит как пчела!</b>
+                <p class="main-slider__description main-slider__description--3">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
+                <a href="catalogue.html" class="button main-slider__button">Подробнее</a>
                 <table class="main-slider__options-table">
                   <tr>
                     <td class="table-value table-value--3">800 м</td>
@@ -194,6 +147,20 @@
                 </table>
               </div>
               <span class="main-slider__number main-slider__number--3">03</span>
+            </li>
+          </ul>
+          <ul class="main-slider__navigation">
+            <li>
+              <input class="main-slider__switcher visually-hidden" id="slide-1" type="radio" name="main-slider" checked>
+              <label for="slide-1"><span class="visually-hidden">Первый слайд</span></label>
+            </li>
+            <li>
+              <input class="main-slider__switcher visually-hidden" id="slide-2" type="radio" name="main-slider">
+              <label for="slide-2"><span class="visually-hidden">Второй слайд</span></label>
+            </li>
+            <li>
+              <input class="main-slider__switcher visually-hidden" id="slide-3" type="radio" name="main-slider">
+              <label for="slide-3"><span class="visually-hidden">Третий слайд</span></label>
             </li>
           </ul>
         </section>
@@ -210,7 +177,7 @@
               <li>
                 <a href="catalogue.html" class="categories__link">
                   <div class="categories__icon categories__icon--monopodes"></div>
-                  <p>Моноподы<br> для селфи</p>
+                  <p>Моноподы для селфи</p>
                 </a>
               </li>
               <li>
@@ -246,13 +213,13 @@
         <div class="container services__container">
           <ul class="services__list">
             <li class="services__tab services__tab--current">
-              <a href="#" class="button">Доставка</a>
+              <button class="button">Доставка</button>
             </li>
             <li class="services__tab">
-              <a href="#" class="button">Гарантия</a>
+              <button class="button">Гарантия</button>
             </li>
             <li class="services__tab">
-              <a href="#" class="button">Кредит</a>
+              <button class="button">Кредит</button>
             </li>
           </ul>
           <ul class="services__slider">
@@ -276,25 +243,17 @@
         <section class="brands">
           <h2 class="visually-hidden">Брэнды</h2>
           <ul class="brands__list">
-            <li>
-              <a href="#" class="brands__link brands__link--dji">
-                <img src="img/logo-1.jpg" width="260" height="100" alt="Логотип DJI">
-              </a>
+            <li class="brands__item brands__item--dji" tabindex="0">
+              <img src="img/logo-1.jpg" width="260" height="100" alt="Логотип DJI">
             </li>
-            <li>
-              <a href="#" class="brands__link brands__link--sp">
-                <img src="img/logo-2.jpg" width="260" height="100" alt="Логотип SP Gadgets">
-              </a>
+            <li class="brands__item brands__item--sp" tabindex="0">
+              <img src="img/logo-2.jpg" width="260" height="100" alt="Логотип SP Gadgets">
             </li>
-            <li>
-              <a href="#" class="brands__link brands__link--gopro">
-                <img src="img/logo-3.jpg" width="260" height="100" alt="Логотип Go Pro">
-              </a>
+            <li class="brands__item brands__item--gopro" tabindex="0">
+              <img src="img/logo-3.jpg" width="260" height="100" alt="Логотип Go Pro">
             </li>
-            <li>
-              <a href="#" class="brands__link brands__link--vive">
-                <img src="img/logo-4.jpg" width="260" height="100" alt="Логотип HTC Vive">
-              </a>
+            <li class="brands__item brands__item--vive" tabindex="0">
+              <img src="img/logo-4.jpg" width="260" height="100" alt="Логотип HTC Vive">
             </li>
           </ul>
         </section>
@@ -316,7 +275,7 @@
             <h2 class="section-header">Контакты</h2>
             <p class="contacts__description">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
             <!--Карта - описательная часть адреса, поэтому обернул её в <p>-->
-            <p><a href="map.html" class="map">
+            <p class="contacts__map"><a href="map.html" class="map">
               <img src="img/map.png" width="560" height="222" alt="Магазин по адресу: г. Москва, ул. Строителей, д. 15">
             </a></p>
             <a href="writeus.html" class="button button--write-us">Напишите нам</a>
@@ -352,14 +311,14 @@
             <p>г. Москва, ул. Строителей, 15</p>
             <!--Навигация по сайту-->
             <ul class="site-navigation site-navigation--footer">
-              <li class="site-navigation__link">
-                <a href="#">Доставка</a>
+              <li class="site-navigation__item">
+                <a href="#" class="site-navigation__link site-navigation__link--footer">Доставка</a>
               </li>
-              <li class="site-navigation__link">
-                <a href="#">Гарантия</a>
+              <li class="site-navigation__item">
+                <a href="#" class="site-navigation__link site-navigation__link--footer">Гарантия</a>
               </li>
-              <li class="site-navigation__link">
-                <a href="#">Контакты</a>
+              <li class="site-navigation__item">
+                <a href="#" class="site-navigation__link site-navigation__link--footer">Контакты</a>
               </li>
             </ul>
             <!--Телефон-->
@@ -437,6 +396,6 @@
 
     <div class="modal-overlay"></div>
 
-    <script src="js/script.js"></script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>
