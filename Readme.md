@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Алексей Бездетко](https://up.htmlacademy.ru/htmlcss/25/user/892681).
-* Наставник: [Антон Варнавский](https://htmlacademy.ru/profile/id223468).
+* Наставник: [Дмитрий Иовлев](https://htmlacademy.ru/profile/skywalker).
 
 ---
 
