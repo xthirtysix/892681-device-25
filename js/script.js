@@ -17,23 +17,45 @@ var isStorageSupport = true;
 var storageName = '';
 var storageEmail = '';
 
+/* Управление формой */
+
+try {
+  storageName = localStorage.getItem('username');
+  storageEmail = localStorage.getItem('email');
+} catch (err) {
+  isStorageSupport = false;
+}
+
+form.addEventListener('submit', function(evt) {
+  if (!username.value || !email.value || !mailBody.value) {
+    evt.preventDefault();
+    writeUs.classList.remove('modal--error');
+    writeUs.offsetWidth = writeUs.offsetWidth;
+    writeUs.classList.add('modal--error');
+  } else {
+    if (isStorageSupport) {
+      localStorage.setItem('username', username.value);
+      localStorage.setItem('email', email.value);
+    }
+  }
+});
+
 /* Управление модальными окнами */
 
 openWriteUs.addEventListener('click', function(evt) {
   evt.preventDefault();
-  username.focus();
-  if (storageName) {
+  writeUs.classList.add('modal--show');
+  overlay.classList.add('modal-overlay--show');
+  if (storageName && storageEmail) {
     username.value = storageName;
-    email.focus();
-  }
-  if (storageEmail) {
     email.value = storageEmail;
     mailBody.focus();
+  } else if (storageName) {
+    username.value = storageName;
+    email.focus();
   } else {
     username.focus();
   }
-  writeUs.classList.add('modal--show');
-  overlay.classList.add('modal-overlay--show');
 });
 
 closeWriteUs.addEventListener('click', function(evt) {
@@ -90,7 +112,8 @@ overlay.addEventListener('click', function(evt) {
 
 try {
   storageName = localStorage.getItem('username');
-  storageEmail = localStorage.getItem('email');
+  storageEmail = loca<<<< corrections
+lStorage.getItem('email');
 } catch (err) {
   isStorageSupport = false;
 }
@@ -120,5 +143,3 @@ form.addEventListener('submit', function(evt) {
     }
   }
 });
-
-
