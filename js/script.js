@@ -97,10 +97,22 @@ try {
 
 form.addEventListener('submit', function(evt) {
   if (!username.value || !email.value || !mailBody.value) {
+    username.classList.remove('write-us__form--invalid');
+    email.classList.remove('write-us__form--invalid');
+    mailBody.classList.remove('write-us__form--invalid');
     evt.preventDefault();
     writeUs.classList.remove('modal--error');
     writeUs.offsetWidth = writeUs.offsetWidth;
     writeUs.classList.add('modal--error');
+    if (!username.value) {
+      username.classList.add('write-us__form--invalid');
+    }
+    if (!email.value) {
+      email.classList.add('write-us__form--invalid');
+    }
+    if (!mailBody.value) {
+      mailBody.classList.add('write-us__form--invalid');
+    }
   } else {
     if (isStorageSupport) {
       localStorage.setItem('username', username.value);
@@ -108,6 +120,5 @@ form.addEventListener('submit', function(evt) {
     }
   }
 });
-
 
 
