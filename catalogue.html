@@ -88,37 +88,11 @@
           <li class="breadcrumbs__link breadcrumbs__link--current">Моноподы для селфи</li>
         </ul>
       </div>
-      <div class="container-wrapper">
-        <div class="container">
-          <div class="catalogue-header">
-            <span class="filter-header">Фильтр:</span>
-          </div>
-          <section class="sort">
-            <h2 class="sort__header">Сортировка:</h2>
-            <ul class="sort__list">
-              <li><a href="#" class="sort__link sort__link--current">По цене</a></li>
-              <li><a href="#" class="sort__link sort__link--type">По типу</a></li>
-              <li><a href="#" class="sort__link">По популярности</a></li>
-              <li>
-                <ul class="sort__order">
-                  <li>
-                    <span class="visually-hidden">По убыванию</span>
-                    <a href="#" class="sort__button"></a>
-                  </li>
-                  <li>
-                    <span class="visually-hidden">По возрастанию</span>
-                    <a href="#" class="sort__button sort__button--down sort__button--current"></a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </section>
-        </div>
-      </div>
+      <div class="catalogue-wrapper">
       <div class="index-columns container">
         <!--Фильтр-->
         <section class="filter">
-          <h2 class="visually-hidden">Фильтр</h2>
+          <h2 class="filter__header">Фильтр:</h2>
           <form class="filter__form" action="https://echo.htmlacademy.ru/" method="GET">
             <fieldset>
               <legend class="filter__section-header filter__section-header--price">Стоимость</legend>
@@ -177,10 +151,28 @@
           </form>
         </section>
         <!--Каталог товаров-->
-        <div class="catalogue-container">
           <section class="goods">
             <h2 class="visually-hidden">Список товаров</h2>
-
+            <section class="sort">
+              <h2 class="sort__header">Сортировка:</h2>
+              <ul class="sort__list">
+                <li><a href="#" class="sort__link sort__link--current">По цене</a></li>
+                <li><a href="#" class="sort__link sort__link--type">По типу</a></li>
+                <li><a href="#" class="sort__link">По популярности</a></li>
+                <li>
+                  <ul class="sort__order">
+                    <li>
+                      <span class="visually-hidden">По убыванию</span>
+                      <a href="#" class="sort__button"></a>
+                    </li>
+                    <li>
+                      <span class="visually-hidden">По возрастанию</span>
+                      <a href="#" class="sort__button sort__button--down sort__button--current"></a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </section>
             <div class="goods__container">
               <!--Карточка товара 1-->
               <ul class="goods__list">
