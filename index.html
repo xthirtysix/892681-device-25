@@ -5,7 +5,7 @@
     <title>HTML Academy: Девайс</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap&subset=latin,cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="main-header container">
@@ -85,7 +85,7 @@
         <section class="main-slider">
           <h2 class="visually-hidden">Промо слайдер</h2>
           <ul class="main-slider__list">
-            <li class="main-slider__slide main-slider__slide--1">
+            <li class="main-slider__slide main-slider__slide--1 main-slider__slide--visible">
               <div class="main-slider__container main-slider__container--left">
                 <img src="img/slider-1.png" width="384" height="486" alt="Самая длинная селфи-палка!">
               </div>
@@ -212,18 +212,18 @@
         <h2 class="visually-hidden">Услуги</h2>
         <div class="container services__container">
           <ul class="services__list">
-            <li class="services__tab services__tab--current">
-              <button class="button">Доставка</button>
+            <li class="services__tab">
+              <button class="services__button services__button--current button">Доставка</button>
             </li>
             <li class="services__tab">
-              <button class="button">Гарантия</button>
+              <button class="services__button button">Гарантия</button>
             </li>
             <li class="services__tab">
-              <button class="button">Кредит</button>
+              <button class="services__button button">Кредит</button>
             </li>
           </ul>
           <ul class="services__slider">
-            <li class="services__slide services__slide--delivery">
+            <li class="services__slide services__slide--shown services__slide--delivery">
               <h3 class="section-header">Доставка</h3>
               <p class="services__description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
             </li>
@@ -386,7 +386,7 @@
     <!--Карта-->
     <section class="modal-map modal">
       <h2 class="visually-hidden">Карта</h2>
-      <p>
+      <p class="modal-map__description">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1125488779976!2d37.52742931592807!3d55.687030980535816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1560356410598!5m2!1sru!2sru" width="960" height="559" style="border:0" allowfullscreen></iframe>
       </p>
       <button class="close-button modal-map__close" type="button">
