@@ -2206,13 +2206,41 @@ input[type=number] {
 
 /* Неактивные чекбоксы/радио */
 
-.filter__list input:disabled {
+.filter__checkbox:disabled + label::before,
+.filter__radio:disabled + label::before,
+.filter__radio:disabled + label::after {
   opacity: 0.25;
 }
 
-.filter__list input:disabled + label {
+.filter__checkbox:disabled + label,
+.filter__radio:disabled + label {
   color: rgb(166, 166, 166);
 }
+
+.filter__checkbox:disabled:active + label::before {
+  background-image: url("../img/checkbox-off.svg");
+}
+
+.filter__checkbox:checked:disabled + label::before,
+.filter__checkbox:checked:disabled:active + label::before {
+  background-image: url("../img/checkbox-on.svg");
+
+  opacity: 0.25;
+}
+
+.filter__radio:disabled:active + label::after {
+  display: none;
+}
+
+.filter__radio:checked:disabled:active + label::after {
+  display: block;
+}
+
+.filter__radio:checked:disabled:active + label::before {
+  opacity: 0.25;
+}
+
+/* Кнопка фильтра */
 
 .filter .button {
   background-color: transparent;
